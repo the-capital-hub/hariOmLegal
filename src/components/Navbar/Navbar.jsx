@@ -1,6 +1,6 @@
 
 import { useState } from "react";
-import { Link } from "react-scroll";
+import { Link, useLocation } from "react-router-dom";
 import {
   Menu,
   X,
@@ -13,22 +13,40 @@ import logo from "../../assets/hol-logo.png";
 import "./Navbar.css";
 
 const navLinks = [
-  { name: "Home", to: "home" },
-  { name: "About Us", to: "about" },
-  { name: "Practice Areas", to: "practice-areas" },
-  { name: "Our Approach", to: "approach" },
-  { name: "Our Offices", to: "offices" },
-  { name: "Contact", to: "contact" },
+  { name: "Home", to: "/" },
+  { name: "About Us", to: "/about" },
+  { name: "Practice Areas", to: "/practice-areas" },
+  { name: "Our Approach", to: "/approach" },
+  { name: "Our Offices", to: "/offices" },
+  { name: "Contact", to: "/contact" },
 ];
+
+const WHATSAPP = "https://wa.me/918123838480";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const location = useLocation();
 
   const closeMenu = () => setMenuOpen(false);
 
+  const isActive = (item) => {
+    if (item.to === "/") {
+      return location.pathname === "/" && !location.hash;
+    }
+
+    if (item.to === "/about") {
+      return location.pathname === "/about";
+    }
+
+    return (
+      location.pathname === "/" &&
+      location.hash === item.to.replace("/", "")
+    );
+  };
+
   return (
     <header className="hol-navbar">
-      {/* Premium contact strip */}
+      {/* Top contact strip */}
       <div className="hol-topbar">
         <div className="hol-topbar-inner">
           <span className="hol-topbar-message">
@@ -53,8 +71,8 @@ export default function Navbar() {
 
       {/* Main navigation */}
       <div className="hol-navbar-inner">
-        <a
-          href="#home"
+        <Link
+          to="/"
           className="hol-brand"
           onClick={closeMenu}
           aria-label="Hari Om Legal homepage"
@@ -64,7 +82,7 @@ export default function Navbar() {
             alt="Hari Om Legal"
             className="hol-brand-logo"
           />
-        </a>
+        </Link>
 
         <nav
           className="hol-desktop-nav"
@@ -74,12 +92,9 @@ export default function Navbar() {
             <Link
               key={item.to}
               to={item.to}
-              smooth
-              duration={450}
-              offset={-115}
-              spy
-              activeClass="hol-nav-active"
-              className="hol-nav-link"
+              className={`hol-nav-link ${
+                isActive(item) ? "hol-nav-active" : ""
+              }`}
             >
               {item.name}
             </Link>
@@ -87,7 +102,7 @@ export default function Navbar() {
         </nav>
 
         <a
-          href="https://wa.me/918123838480"
+          href={WHATSAPP}
           target="_blank"
           rel="noopener noreferrer"
           className="hol-nav-cta"
@@ -98,6 +113,7 @@ export default function Navbar() {
           </span>
         </a>
 
+        {/* Mobile menu button */}
         <button
           type="button"
           className="hol-menu-toggle"
@@ -110,7 +126,7 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* Mobile menu */}
+      {/* Mobile navigation */}
       <div
         id="hol-mobile-menu"
         className={`hol-mobile-menu ${menuOpen ? "is-open" : ""}`}
@@ -124,12 +140,9 @@ export default function Navbar() {
             <Link
               key={item.to}
               to={item.to}
-              smooth
-              duration={450}
-              offset={-95}
-              spy
-              activeClass="hol-nav-active"
-              className="hol-mobile-link"
+              className={`hol-mobile-link ${
+                isActive(item) ? "hol-nav-active" : ""
+              }`}
               onClick={closeMenu}
               tabIndex={menuOpen ? 0 : -1}
             >
@@ -147,7 +160,7 @@ export default function Navbar() {
           </div>
 
           <a
-            href="https://wa.me/918123838480"
+            href={WHATSAPP}
             target="_blank"
             rel="noopener noreferrer"
             className="hol-mobile-cta"
