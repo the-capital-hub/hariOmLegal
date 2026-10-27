@@ -1,27 +1,29 @@
-/* Hari Om Legal cinematic scroll system. Existing brand colors and layout stay unchanged. */
 
+/* Scroll reveal */
 [data-reveal],
 [data-stagger-item] {
-  --hol-reveal-delay: 0ms;
   opacity: 0;
-  transform: translate3d(0, 34px, 0);
+  transform: translate3d(0, 32px, 0);
   transition:
-    opacity 760ms cubic-bezier(0.22, 1, 0.36, 1),
-    transform 900ms cubic-bezier(0.22, 1, 0.36, 1);
-  transition-delay: var(--hol-reveal-delay);
+    opacity 750ms ease,
+    transform 750ms cubic-bezier(0.22, 1, 0.36, 1);
+  transition-delay: var(--hol-reveal-delay, 0ms);
   will-change: opacity, transform;
 }
 
-[data-reveal][data-hol-direction="down"] {
-  transform: translate3d(0, -30px, 0);
+[data-reveal="down"] {
+  transform: translate3d(0, -32px, 0);
 }
-[data-reveal][data-hol-direction="left"] {
-  transform: translate3d(38px, 0, 0);
+
+[data-reveal="left"] {
+  transform: translate3d(32px, 0, 0);
 }
-[data-reveal][data-hol-direction="right"] {
-  transform: translate3d(-38px, 0, 0);
+
+[data-reveal="right"] {
+  transform: translate3d(-32px, 0, 0);
 }
-[data-reveal][data-hol-direction="none"] {
+
+[data-reveal="none"] {
   transform: none;
 }
 
@@ -29,66 +31,36 @@
 [data-stagger-item].hol-is-visible {
   opacity: 1;
   transform: translate3d(0, 0, 0);
-  will-change: auto;
 }
 
-/* Apply data-image-zoom to an image or a clipped image wrapper. */
+/* Image zoom */
 [data-image-zoom] {
   overflow: hidden;
-  isolation: isolate;
 }
 
-[data-image-zoom] img,
-img[data-image-zoom] {
-  transform: scale(1.075);
-  transition: transform 1400ms cubic-bezier(0.2, 0.65, 0.25, 1);
-  will-change: transform;
+[data-image-zoom] img {
+  transform: scale(1.08);
+  transition: transform 1000ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-[data-image-zoom].hol-image-in-view img,
-[data-image-zoom].hol-image-in-view img[data-image-zoom],
-img[data-image-zoom].hol-image-in-view {
+[data-image-zoom].hol-image-in-view img {
   transform: scale(1);
-  will-change: auto;
 }
 
-/* Use on a background/image wrapper with sufficient overflow hidden. */
+/* Parallax */
 [data-parallax] {
-  --hol-parallax-y: 0px;
-}
-
-[data-parallax] > img,
-img[data-parallax] {
-  transform: translate3d(0, var(--hol-parallax-y), 0) scale(1.08);
-  transition: transform 120ms linear;
+  transform: translate3d(0, var(--hol-parallax-y, 0px), 0);
   will-change: transform;
-}
-
-/* Optional premium hover motion for existing cards. Does not change colors or dimensions. */
-[data-scroll-card] {
-  transition:
-    transform 450ms cubic-bezier(0.2, 0.65, 0.25, 1),
-    box-shadow 450ms ease;
-}
-
-@media (hover: hover) and (pointer: fine) {
-  [data-scroll-card]:hover {
-    transform: translateY(-5px);
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {
   [data-reveal],
   [data-stagger-item],
   [data-image-zoom] img,
-  img[data-image-zoom],
-  [data-parallax] > img,
-  img[data-parallax],
-  [data-scroll-card] {
-    opacity: 1 !important;
-    transform: none !important;
-    transition: none !important;
-    animation: none !important;
-    will-change: auto !important;
+  [data-parallax] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+    will-change: auto;
   }
 }

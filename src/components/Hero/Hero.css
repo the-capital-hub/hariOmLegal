@@ -98,7 +98,7 @@
   font-family: "Playfair Display", Georgia, serif;
   font-size: clamp(48px, 5.7vw, 80px);
   font-weight: 400;
-  letter-spacing: -.045em;
+  letter-spacing: -.015em;
   line-height: 1.07;
 }
 

@@ -167,11 +167,6 @@ export default function Home() {
 
       <div className="hol-about-image-overlay" />
 
-      <div className="hol-about-index">
-        <span>01</span>
-        <span className="hol-about-index-line" />
-        <span>OUR PHILOSOPHY</span>
-      </div>
 
       <div className="hol-about-seal">
         <Scale size={27} strokeWidth={1.4} />

@@ -46,10 +46,7 @@ export default function ApproachSection() {
 
             <div className="hol-approach-image-shade" />
 
-            <div className="hol-approach-image-caption">
-              <span className="hol-approach-caption-line" />
-              <span>THE HARI OM LEGAL APPROACH</span>
-            </div>
+            
 
             <div className="hol-approach-image-bottom">
               <span>01</span>
