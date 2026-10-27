@@ -11,12 +11,15 @@ import Approach from "./pages/Approach/Approach";
 import Offices from "./pages/Offices/Offices";
 import Contact from "./pages/Contact/Contact";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
+import ScrollEffects from "./components/ScrollAnimation/ScrollEffects";
 
 function App() {
   return (
     <BrowserRouter>
       <Navbar />
+      
       <ScrollToTop/>
+      <ScrollEffects/>
 
       <main>
         <Routes>
