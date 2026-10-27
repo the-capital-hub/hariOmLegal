@@ -94,8 +94,8 @@ export default function ApproachSection() {
               href={WHATSAPP}
               target="_blank"
               rel="noreferrer"
-            >
-              <span>Discuss your matter</span>
+            style={{color:"white"}} >
+              <span >Discuss your matter</span>
               <span className="hol-approach-cta-icon">
                 <ArrowUpRight size={18} />
               </span>

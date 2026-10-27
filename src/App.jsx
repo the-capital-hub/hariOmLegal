@@ -10,11 +10,13 @@ import PracticeAreas from "./pages/PracticeAreas/PracticeAreas";
 import Approach from "./pages/Approach/Approach";
 import Offices from "./pages/Offices/Offices";
 import Contact from "./pages/Contact/Contact";
+import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 
 function App() {
   return (
     <BrowserRouter>
       <Navbar />
+      <ScrollToTop/>
 
       <main>
         <Routes>

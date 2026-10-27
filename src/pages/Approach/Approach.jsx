@@ -239,7 +239,7 @@ export default function Approach() {
             ))}
           </ul>
 
-          <Link to="/contact" className="approach-text-link">
+          <Link to="/contact" className="approach-text-link" style={{color:"white"}}>
             Discuss Your Requirements <span>↗</span>
           </Link>
         </div>

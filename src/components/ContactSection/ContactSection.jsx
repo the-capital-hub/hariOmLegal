@@ -7,7 +7,7 @@ import {
   Scale,
   CheckCircle2,
 } from "lucide-react";
-
+import certificate from '../../assets/Certificate.pdf'
 import "./ContactSection.css";
 
 const WHATSAPP = "https://wa.me/918123838480";
@@ -43,7 +43,7 @@ export default function ContactSection() {
               href={WHATSAPP}
               target="_blank"
               rel="noreferrer"
-            >
+            style={{color:"white"}}>
               <MessageCircle size={18} strokeWidth={1.7} />
               <span>Contact us on WhatsApp</span>
               <ArrowUpRight size={18} />
@@ -162,7 +162,7 @@ export default function ContactSection() {
 
             <a
               className="hol-trademark-link"
-              href="/hari-om-legal-trademark.pdf"
+              href={certificate}
               target="_blank"
               rel="noreferrer"
             >

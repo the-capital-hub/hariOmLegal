@@ -188,7 +188,11 @@ export default function Home() {
     </div>
 
     <div className="hol-about-copy">
-      <SectionLabel>ABOUT</SectionLabel>
+      <div className="hol-about-eyebrow">
+          <span />
+          ABOUT
+        </div>
+      
 
       <h2>
         Legal expertise.
