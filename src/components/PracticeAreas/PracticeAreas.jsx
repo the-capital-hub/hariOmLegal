@@ -1,16 +1,38 @@
 
-import { ArrowRight, ArrowUpRight } from "lucide-react";
+import { ArrowRight, ArrowUpRight, Scale } from "lucide-react";
 import "./PracticeAreas.css";
-import services from '../../assets/home/services.png'
-const featuredImage =
-  services;
+import services from "../../assets/home/services.png";
+
+const featuredImage = services;
+
+const slpPractice = {
+  number: "SLP",
+  title: "Supreme Court Litigation & SLPs",
+  description:
+    "Assistance with Supreme Court matters, Special Leave Petitions, legal grounds analysis and procedural requirements.",
+  icon: Scale,
+};
 
 export default function PracticeAreas({ practices = [] }) {
-  const featured = practices[0];
-  const remaining = practices.slice(1);
+  // Preserve existing practice areas and avoid adding SLPs twice.
+  const hasSlpPractice = practices.some((practice) =>
+    /supreme court|special leave petition|\bslps\b/i.test(
+      practice.title || ""
+    )
+  );
+
+  const allPractices = hasSlpPractice
+    ? practices
+    : [...practices, slpPractice];
+
+  const featured = allPractices[0];
+  const remaining = allPractices.slice(1);
 
   return (
-    <section className="hol-practices hol-section" id="practice-areas">
+    <section
+      className="hol-practices hol-section"
+      id="practice-areas"
+    >
       <div className="hol-practices-inner">
         <header className="hol-practices-heading">
           <div className="hol-practices-heading-main">
@@ -34,7 +56,7 @@ export default function PracticeAreas({ practices = [] }) {
         </header>
 
         <div className="hol-practices-layout">
-          {/* LEFT: Featured practice */}
+          {/* LEFT: Existing featured practice */}
           {featured && (
             <article className="hol-practice-featured">
               <div className="hol-practice-featured-image">
@@ -48,7 +70,9 @@ export default function PracticeAreas({ practices = [] }) {
 
                 <div className="hol-featured-topline">
                   <span>FEATURED PRACTICE</span>
-                  <span>01 / {String(practices.length).padStart(2, "0")}</span>
+                  <span>
+                    01 / {String(allPractices.length).padStart(2, "0")}
+                  </span>
                 </div>
 
                 <div className="hol-featured-content">
@@ -61,7 +85,6 @@ export default function PracticeAreas({ practices = [] }) {
                   </div>
 
                   <h3>{featured.title}</h3>
-
                   <p>{featured.description}</p>
 
                   <a
@@ -81,7 +104,7 @@ export default function PracticeAreas({ practices = [] }) {
             </article>
           )}
 
-          {/* RIGHT: Remaining practice areas */}
+          {/* RIGHT: Existing and new practice areas */}
           <div className="hol-practices-list">
             <div className="hol-practices-list-heading">
               <span>OUR SERVICES</span>
@@ -124,7 +147,10 @@ export default function PracticeAreas({ practices = [] }) {
               );
             })}
 
-            <a href="#contact" className="hol-practices-contact">
+            <a
+              href="#contact"
+              className="hol-practices-contact"
+            >
               <span>Need guidance on your matter?</span>
 
               <strong>

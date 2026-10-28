@@ -1,0 +1,316 @@
+
+.hol-disclaimer-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 999999;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 18px;
+  background: rgba(22, 19, 18, 0.62);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+.hol-disclaimer-modal {
+  width: min(920px, 100%);
+  max-height: min(82vh, 780px);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: #f6f3ee;
+  color: #211f1e;
+  border: 1px solid #ded8d1;
+  border-top: 3px solid #cf3329;
+  box-shadow: 0 20px 70px rgba(0, 0, 0, 0.25);
+  animation: holDisclaimerEnter 0.3s ease-out;
+}
+
+.hol-disclaimer-header {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 20px 26px;
+  border-bottom: 1px solid #ded8d1;
+}
+
+.hol-disclaimer-brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.hol-disclaimer-icon {
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  color: #cf3329;
+  border: 1px solid #ded8d1;
+}
+
+.hol-disclaimer-eyebrow {
+  display: block;
+  margin-bottom: 5px;
+  color: #cf3329;
+  font-size: 12px;
+  line-height: 1.5;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.hol-disclaimer-header h2 {
+  margin: 0;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(22px, 3vw, 30px);
+  line-height: 1.25;
+  font-weight: 400;
+}
+
+.hol-disclaimer-notice {
+  color: #686361;
+  font-size: 12px;
+  line-height: 1.5;
+  letter-spacing: 0.08em;
+  text-align: right;
+}
+
+.hol-disclaimer-intro {
+  flex-shrink: 0;
+  padding: 14px 26px;
+  color: #686361;
+  font-size: 12px;
+  line-height: 1.8;
+  border-bottom: 1px solid #ded8d1;
+}
+
+.hol-disclaimer-body {
+  min-height: 0;
+  flex: 1;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: 8px 26px;
+  scrollbar-width: thin;
+  scrollbar-color: #c8bfb5 transparent;
+}
+
+.hol-disclaimer-body::-webkit-scrollbar {
+  width: 8px;
+}
+
+.hol-disclaimer-body::-webkit-scrollbar-thumb {
+  background: #c8bfb5;
+  border-radius: 8px;
+}
+
+.hol-disclaimer-body::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.hol-disclaimer-section {
+  padding: 14px 0;
+  border-bottom: 1px solid #e3ddd6;
+}
+
+.hol-disclaimer-section:last-child {
+  border-bottom: none;
+}
+
+.hol-disclaimer-section h3 {
+  margin: 0 0 10px;
+  color: #211f1e;
+  font-size: 14px;
+  line-height: 1.6;
+  font-weight: 700;
+}
+
+.hol-disclaimer-section p {
+  margin: 0 0 10px;
+  color: #5f5955;
+  font-size: 12px;
+  line-height: 1.9;
+  overflow-wrap: anywhere;
+}
+
+.hol-disclaimer-section p:last-child {
+  margin-bottom: 0;
+}
+
+.hol-disclaimer-footer {
+  flex-shrink: 0;
+  padding: 15px 26px 17px;
+  background: #f6f3ee;
+  border-top: 1px solid #ded8d1;
+}
+
+.hol-disclaimer-footnote,
+.hol-disclaimer-declined {
+  margin: 0 0 13px;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.hol-disclaimer-footnote {
+  color: #686361;
+}
+
+.hol-disclaimer-declined {
+  color: #a72b24;
+}
+
+.hol-disclaimer-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.hol-disclaimer-actions button {
+  min-height: 46px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 12px 22px;
+  font-family: inherit;
+  font-size: 12px;
+  line-height: 1.5;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.hol-disclaimer-decline {
+  color: #211f1e;
+  background: transparent;
+  border: 1px solid #cfc6bd;
+}
+
+.hol-disclaimer-decline:hover {
+  background: #ebe5dd;
+}
+
+.hol-disclaimer-accept {
+  color: #fff;
+  background: #cf3329;
+  border: 1px solid #cf3329;
+}
+
+.hol-disclaimer-accept:hover {
+  background: #a92720;
+  border-color: #a92720;
+}
+
+.hol-disclaimer-actions button:focus-visible {
+  outline: 2px solid #211f1e;
+  outline-offset: 3px;
+}
+
+.hol-disclaimer-legal-note {
+  display: block;
+  margin-top: 13px;
+  color: #686361;
+  text-align: center;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+@keyframes holDisclaimerEnter {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 600px) {
+  .hol-disclaimer-overlay {
+    align-items: center;
+    padding: 8px;
+  }
+
+  .hol-disclaimer-modal {
+    width: 100%;
+    max-height: 92vh;
+    max-height: 92dvh;
+  }
+
+  .hol-disclaimer-header {
+    padding: 15px;
+    gap: 10px;
+  }
+
+  .hol-disclaimer-brand {
+    gap: 10px;
+  }
+
+  .hol-disclaimer-icon {
+    width: 38px;
+    height: 38px;
+  }
+
+  .hol-disclaimer-notice {
+    display: none;
+  }
+
+  .hol-disclaimer-intro {
+    padding: 12px 15px;
+  }
+
+  .hol-disclaimer-body {
+    padding: 6px 15px;
+  }
+
+  .hol-disclaimer-section {
+    padding: 12px 0;
+  }
+
+  .hol-disclaimer-section h3 {
+    font-size: 14px;
+  }
+
+  .hol-disclaimer-section p {
+    font-size: 12px;
+    line-height: 1.8;
+  }
+
+  .hol-disclaimer-footer {
+    padding: 12px 15px 14px;
+  }
+
+  .hol-disclaimer-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+
+  .hol-disclaimer-actions button {
+    min-width: 0;
+    min-height: 46px;
+    padding: 10px 8px;
+    font-size: 12px;
+  }
+
+  .hol-disclaimer-legal-note {
+    margin-top: 12px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hol-disclaimer-modal {
+    animation: none;
+  }
+
+  .hol-disclaimer-actions button {
+    transition: none;
+  }
+}

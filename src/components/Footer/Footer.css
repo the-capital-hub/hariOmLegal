@@ -10,6 +10,21 @@
   font-family: "DM Sans", sans-serif;
 }
 
+/* Footer logo styling */
+
+.footer-logo {
+  display: block;
+  width: 180px;
+  height: auto;
+  object-fit: contain;
+  background: transparent;
+  padding: 0;
+  border: none;
+  box-shadow: none;
+  mix-blend-mode: normal;
+}
+
+
 .hol-footer,
 .hol-footer * {
   box-sizing: border-box;
@@ -110,7 +125,10 @@
   align-items: center;
   max-width: 100%;
   padding: 4px;
-  background: #fff;
+  background: #ea86867e;
+  border-radius: 10px;
+  color: white;
+  
   text-decoration: none;
 }
 

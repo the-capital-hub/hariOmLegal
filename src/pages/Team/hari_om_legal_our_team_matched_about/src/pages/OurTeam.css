@@ -1,0 +1,147 @@
+.our-team-page {
+  --team-red: #cf3329;
+  --team-cream: #f7f4ee;
+  --team-ink: #171512;
+  --team-muted: #716d67;
+  --team-border: #e5ded4;
+  background: var(--team-cream);
+  color: var(--team-ink);
+  font-family: "DM Sans", sans-serif;
+  overflow: hidden;
+}
+.our-team-page *, .our-team-page *::before, .our-team-page *::after { box-sizing: border-box; }
+.our-team-page img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.our-team-page p { margin: 0; }
+.our-team-page a { text-decoration: none; }
+.our-team-page h1, .our-team-page h2, .our-team-page h3 { font-family: "Playfair Display", Georgia, serif; font-weight: 500; }
+.our-team-page h1 { color: var(--team-cream); }
+.our-team-page h1 em, .our-team-page h2 em { color: var(--team-red); font-weight: 500; }
+.team-eyebrow { display: flex; align-items: center; gap: 11px; font-size: 10px; font-weight: 700; letter-spacing: 1.6px; line-height: 1.6; }
+.team-eyebrow > span { width: 34px; height: 2px; background: white; position: relative; }
+.team-eyebrow > span::after { content: ""; position: absolute; right: -7px; top: 50%; width: 5px; height: 5px; border-radius: 50%; background: var(--team-red); transform: translateY(-50%); }
+
+/* Hero mirrors About hero proportions and treatment */
+.team-hero { min-height: 370px; padding: 45px 7%; position: relative; display: flex; align-items: center; isolation: isolate; color: #fff; background: #17130f; }
+.team-hero-bg { position: absolute; inset: 0; z-index: -1; background: linear-gradient(90deg, rgba(12,11,9,.9) 0%, rgba(12,11,9,.67) 48%, rgba(12,11,9,.18) 100%), url("../../assets/about/about-hero.png") center 52% / cover no-repeat; }
+.team-hero-content { max-width: 570px; }
+.team-hero h1 { font-size: clamp(39px, 5vw, 62px); line-height: 1.06; letter-spacing: -1.7px; margin: 18px 0 13px; }
+.team-hero h1 em { color: var(--team-red); }
+.team-hero-content > p { max-width: 390px; color: rgba(255,255,255,.78); font-size: 13px; line-height: 1.8; }
+.team-hero-content > .team-hero-subtitle { font-size: 14px; font-weight: 600; color: #fff; margin-bottom: 7px; }
+.team-hero-link { display: inline-flex; align-items: center; gap: 14px; margin-top: 22px; color: #fff; font-size: 10px; font-weight: 700; letter-spacing: 1.4px; }
+.team-circle-arrow { width: 42px; height: 42px; display: grid; place-items: center; border: 1px solid rgba(255,255,255,.55); border-radius: 50%; font-size: 22px; transition: background .3s, transform .3s; }
+.team-hero-link:hover .team-circle-arrow { background: var(--team-red); border-color: var(--team-red); transform: rotate(-45deg); }
+.team-hero-index { position: absolute; right: 7%; bottom: 18px; color: rgba(255,255,255,.75); font-size: 10px; letter-spacing: 1.5px; }
+
+.team-side-label { display: flex; flex-direction: column; align-items: flex-start; }
+.team-side-label > span { color: var(--team-red); font-size: 10px; font-weight: 700; letter-spacing: 1.3px; line-height: 1.7; }
+.team-side-label > i { width: 1px; height: 38px; background: var(--team-red); margin: 12px 0 10px; }
+.team-side-label > p { color: var(--team-muted); font-size: 10px; line-height: 1.85; letter-spacing: 1px; }
+
+/* Intro */
+.team-intro { max-width: 1500px; margin: 0 auto; padding: 28px 5%; display: grid; grid-template-columns: .65fr 1.2fr 1.35fr; gap: 28px; align-items: start; }
+.team-intro-copy h2, .team-commitment-copy h2 { font-size: clamp(31px, 3.6vw, 43px); line-height: 1.13; letter-spacing: -1.2px; margin: 0 0 15px; }
+.team-intro-copy > p, .team-commitment-copy > p { color: var(--team-muted); font-size: 12px; line-height: 1.8; margin-bottom: 12px; }
+.team-intro-image { height: 205px; position: relative; overflow: hidden; background: #ddd3c5; }
+.team-intro-image img { transition: transform .6s ease; }
+.team-intro-image:hover img { transform: scale(1.04); }
+.team-intro-image > span { position: absolute; left: 0; right: 0; bottom: 0; padding: 13px; background: linear-gradient(transparent, rgba(0,0,0,.8)); color: #fff; font-size: 11px; }
+
+/* Dark principles strip mirrors About stats */
+.team-stats { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 0; padding: 30px 7%; background: #171512; color: #fff; }
+.team-stat { padding: 0 23px; border-right: 1px solid rgba(255,255,255,.13); min-width: 0; }
+.team-stat:first-child { padding-left: 0; }
+.team-stat:last-child { border-right: 0; padding-right: 0; }
+.team-stat-icon { display: block; color: var(--team-red); font-size: 29px; margin-bottom: 7px; }
+.team-stat h3 { color: #fff; font-size: clamp(22px,2.8vw,34px); line-height: 1.15; margin: 0 0 5px; }
+.team-stat strong { display: block; font-size: 12px; font-weight: 600; margin-bottom: 7px; }
+.team-stat p { max-width: 190px; color: rgba(255,255,255,.65); font-size: 11px; line-height: 1.65; }
+
+/* Team directory */
+.team-directory { max-width: 1500px; margin: 0 auto; padding: 30px 5%; border-bottom: 1px solid var(--team-border); }
+.team-directory-heading { display: grid; grid-template-columns: .8fr 1.25fr 1.2fr; gap: 25px; align-items: start; margin-bottom: 23px; }
+.team-directory-heading > h2 { font-size: clamp(31px,3.7vw,44px); line-height: 1.1; letter-spacing: -1.1px; margin: 0; }
+.team-directory-heading > p { color: var(--team-muted); font-size: 12px; line-height: 1.8; padding-top: 5px; }
+.team-members-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 15px; }
+.team-member-card { min-width: 0; border: 1px solid var(--team-border); background: rgba(255,255,255,.22); transition: background .25s, transform .3s; animation: team-card-enter .65s both; animation-delay: var(--team-delay,0ms); }
+.team-member-card:hover { background: #fffaf3; transform: translateY(-4px); }
+.team-member-image { height: 205px; position: relative; overflow: hidden; background: #ddd3c5; }
+.team-member-image img { transition: transform .5s; filter: saturate(.8); }
+.team-member-card:hover .team-member-image img { transform: scale(1.04); }
+.team-member-number { position: absolute; top: 10px; left: 10px; display: grid; place-items: center; width: 30px; height: 30px; color: #fff; background: rgba(23,21,18,.78); font-size: 10px; }
+.team-member-founder { position: absolute; right: 10px; bottom: 10px; padding: 7px 9px; background: var(--team-red); color: #fff; font-size: 9px; font-weight: 700; letter-spacing: 1px; }
+.team-member-initials { display: none; }
+.team-member-copy { padding: 13px 15px 15px; }
+.team-member-role { display: block; color: var(--team-red); font-size: 10px; font-weight: 700; letter-spacing: 1.3px; text-transform: uppercase; margin-bottom: 5px; }
+.team-member-copy h3 { font-size: 20px; line-height: 1.25; margin: 0 0 7px; }
+.team-member-copy p { color: var(--team-muted); font-size: 11px; line-height: 1.7; }
+.team-image-note { color: #8b847a; font-size: 10px; line-height: 1.7; margin-top: 15px !important; }
+
+/* Commitment */
+.team-commitment { max-width: 1500px; margin: 0 auto; padding: 28px 5%; display: grid; grid-template-columns: 1.15fr .55fr 1.4fr; gap: 28px; align-items: center; border-bottom: 1px solid var(--team-border); }
+.team-commitment-image { height: 220px; overflow: hidden; background: #ddd3c5; }
+.team-commitment-image img { transition: transform .5s ease; }
+.team-commitment-image:hover img { transform: scale(1.04); }
+.team-commitment-copy h2 { font-size: clamp(30px,3.5vw,43px); }
+.team-text-link { display: inline-flex; align-items: center; gap: 12px; color: var(--team-red); font-size: 11px; font-weight: 600; margin-top: 3px; padding-bottom: 5px; border-bottom: 1px solid rgba(207,51,41,.45); }
+.team-text-link span { font-size: 17px; transition: transform .25s; }
+.team-text-link:hover span { transform: translate(3px,-3px); }
+
+/* CTA mirrors About CTA */
+.team-cta { min-height: 260px; padding: 35px 7%; position: relative; display: flex; align-items: center; isolation: isolate; color: #fff; background: #17130f; }
+.team-cta-bg { position: absolute; inset: 0; z-index: -1; background: linear-gradient(90deg,rgba(12,11,9,.97),rgba(12,11,9,.86) 45%,rgba(12,11,9,.25)),url("../../assets/about/about-cta.png") center / cover no-repeat; }
+.team-cta-content { max-width: 550px; }
+.team-cta h2 { color: #fff; font-size: clamp(35px,4.3vw,49px); line-height: 1.1; letter-spacing: -1px; margin: 15px 0 11px; }
+.team-cta-content > p { color: rgba(255,255,255,.75); font-size: 12px; line-height: 1.8; max-width: 410px; margin-bottom: 17px; }
+.team-primary-button { display: inline-flex; align-items: center; justify-content: space-between; gap: 20px; min-height: 42px; padding: 10px 15px; color: #fff; background: var(--team-red); border: 1px solid var(--team-red); font-size: 12px; transition: background .25s,color .25s; }
+.team-primary-button span { font-size: 18px; }
+.team-primary-button:hover { background: transparent; color: #fff; }
+
+@keyframes team-card-enter { from { opacity: 0; transform: translateY(15px); } to { opacity: 1; transform: translateY(0); } }
+@media (max-width:1000px) {
+  .team-intro { grid-template-columns: .6fr 1.2fr; gap: 22px; }
+  .team-intro-image { grid-column: 2; height: 210px; }
+  .team-directory-heading { grid-template-columns: .65fr 1.2fr; gap: 20px; }
+  .team-directory-heading > p { grid-column: 2; }
+  .team-members-grid { grid-template-columns: repeat(3,minmax(0,1fr)); }
+  .team-member-image { height: 165px; }
+  .team-commitment { grid-template-columns: .95fr .65fr 1.3fr; gap: 18px; }
+}
+@media (max-width:700px) {
+  .team-hero { min-height: 420px; padding: 38px 6%; }
+  .team-hero-bg { background: linear-gradient(90deg,rgba(12,11,9,.95),rgba(12,11,9,.68)),url("../../assets/about/about-hero.png") 62% center / cover no-repeat; }
+  .team-hero h1 { font-size: clamp(37px,9vw,49px); letter-spacing: -1.2px; }
+  .team-hero-content > p { font-size: 12px; }
+  .team-hero-index { right: 6%; }
+  .team-intro { padding: 27px 5%; grid-template-columns: 1fr; gap: 17px; }
+  .team-intro-copy h2, .team-commitment-copy h2 { font-size: 35px; }
+  .team-intro-image { grid-column: auto; height: 220px; }
+  .team-side-label > i { height: 23px; margin: 8px 0; }
+  .team-side-label > p { display: none; }
+  .team-stats { grid-template-columns: repeat(2,minmax(0,1fr)); padding: 24px 5%; row-gap: 24px; }
+  .team-stat { padding: 0 13px; border-right: 1px solid rgba(255,255,255,.13); }
+  .team-stat:nth-child(2) { border-right: 0; }
+  .team-stat:nth-child(3) { padding-left: 0; }
+  .team-stat h3 { font-size: 25px; }
+  .team-directory { padding: 27px 5%; }
+  .team-directory-heading { grid-template-columns: 1fr; gap: 16px; margin-bottom: 20px; }
+  .team-directory-heading > h2 { font-size: 36px; }
+  .team-directory-heading > p { grid-column: auto; }
+  .team-members-grid { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 12px; }
+  .team-member-image { height: 175px; }
+  .team-member-copy { padding: 12px; }
+  .team-member-copy h3 { font-size: 17px; }
+  .team-member-copy p { font-size: 11px; }
+  .team-commitment { grid-template-columns: 1fr; gap: 17px; padding: 27px 5%; }
+  .team-commitment-image { height: 220px; }
+  .team-cta { min-height: 280px; padding: 32px 6%; }
+  .team-cta-bg { background: linear-gradient(90deg,rgba(12,11,9,.96),rgba(12,11,9,.72)),url("../../assets/about/about-cta.png") center / cover no-repeat; }
+  .team-cta h2 { font-size: 38px; }
+}
+@media (max-width:420px) {
+  .team-members-grid { grid-template-columns: 1fr; }
+  .team-member-image { height: 215px; }
+}
+@media (prefers-reduced-motion:reduce) {
+  .our-team-page *, .our-team-page *::before, .our-team-page *::after { transition-duration:.01ms !important; animation-duration:.01ms !important; animation-iteration-count:1 !important; scroll-behavior:auto !important; }
+}

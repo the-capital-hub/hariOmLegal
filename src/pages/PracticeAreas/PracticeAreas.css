@@ -816,3 +816,88 @@
     transition: none;
   }
 }
+
+/* Supreme Court Litigation and SLPs */
+
+.pa-slp-section {
+  display: grid;
+  grid-template-columns: 0.55fr 3.45fr;
+  gap: 5.5%;
+  padding: 36px 8.3%;
+  background: #fff;
+  border-top: 1px solid var(--pa-border);
+}
+
+.pa-slp-label {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 18px;
+}
+
+.pa-slp-label p {
+  margin: 0;
+  color: var(--pa-muted);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  line-height: 1.7;
+}
+
+.pa-slp-content {
+  min-width: 0;
+}
+
+.pa-slp-content h2 {
+  margin: 0 0 18px;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(29px, 3.3vw, 42px);
+  font-weight: 400;
+  line-height: 1.15;
+  letter-spacing: -0.035em;
+}
+
+.pa-slp-content h2 em {
+  color: var(--pa-red);
+  font-weight: 400;
+}
+
+.pa-slp-content p {
+  margin: 0 0 15px;
+  color: var(--pa-muted);
+  font-size: 12px;
+  line-height: 1.85;
+}
+
+@media (max-width: 900px) {
+  .pa-slp-section {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 30px 6%;
+  }
+
+  .pa-slp-label {
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .pa-slp-label .pa-intro-rule,
+  .pa-slp-label p {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .pa-slp-section {
+    padding: 30px 6%;
+  }
+
+  .pa-slp-content h2 {
+    font-size: 31px;
+  }
+
+  .pa-slp-content p {
+    font-size: 12px;
+    line-height: 1.8;
+  }
+}

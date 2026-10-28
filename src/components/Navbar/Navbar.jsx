@@ -17,6 +17,8 @@ const navLinks = [
   { name: "About Us", to: "/about" },
   { name: "Practice Areas", to: "/practice-areas" },
   { name: "Our Approach", to: "/approach" },
+  { name: "Team", to: "/our-team" },
+
   { name: "Our Offices", to: "/offices" },
   { name: "Contact", to: "/contact" },
 ];

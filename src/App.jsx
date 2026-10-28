@@ -12,6 +12,8 @@ import Offices from "./pages/Offices/Offices";
 import Contact from "./pages/Contact/Contact";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 import ScrollEffects from "./components/ScrollAnimation/ScrollEffects";
+import OurTeam from "./pages/Team/OurTeam";
+import DisclaimerModal from "./components/DisclaimerModal/DisclaimerModal";
 
 function App() {
   return (
@@ -29,11 +31,14 @@ function App() {
                 <Route path="/approach" element={<Approach />} />
                 <Route path="/offices" element={<Offices />} />
                 <Route path="/contact" element={<Contact />} />
+                <Route path="/our-team" element={<OurTeam />} />
 
         </Routes>
       </main>
+      
 
       <Footer />
+      <DisclaimerModal/>
     </BrowserRouter>
   );
 }

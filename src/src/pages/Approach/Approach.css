@@ -1,0 +1,687 @@
+
+.approach-page {
+  --approach-red: #cf3329;
+  --approach-cream: #f7f4ee;
+  --approach-ink: #171512;
+  --approach-muted: #716d67;
+  --approach-border: #e5ded4;
+  background: var(--approach-cream);
+  color: var(--approach-ink);
+  font-family: "DM Sans", sans-serif;
+  overflow: hidden;
+}
+
+.approach-page *,
+.approach-page *::before,
+.approach-page *::after {
+  box-sizing: border-box;
+}
+
+.approach-page img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.approach-page p {
+  margin: 0;
+}
+
+.approach-page a {
+  text-decoration: none;
+}
+
+.approach-page h1,
+.approach-page h2,
+.approach-page h3 {
+  font-family: "Playfair Display", Georgia, serif;
+  font-weight: 500;
+}
+
+.approach-page h1 em,
+.approach-page h2 em {
+  color: var(--approach-red);
+  font-weight: 500;
+}
+.approach-page h1{
+  color: var(--approach-cream);
+}
+
+.approach-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.6px;
+  line-height: 1.6;
+}
+
+.approach-eyebrow > span {
+   width: 34px;
+  height: 2px;
+  background: white;
+  position: relative;
+}
+.approach-eyebrow > span::after {
+  content: "";
+  position: absolute;
+  right: -7px;
+  top: 50%;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--approach-red);
+  transform: translateY(-50%);
+
+}
+
+/* Hero */
+
+.approach-hero {
+  position: relative;
+  isolation: isolate;
+  min-height: 385px;
+  padding: 45px 7%;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  background: #17130f;
+}
+
+.approach-hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(12, 11, 9, 0.97) 0%,
+      rgba(12, 11, 9, 0.85) 36%,
+      rgba(12, 11, 9, 0.2) 100%
+    ),
+    url("../../assets/approach/approach-hero.png") center 50% / cover no-repeat;
+}
+
+.approach-hero-content {
+  max-width: 600px;
+}
+
+.approach-hero h1 {
+  margin: 19px 0 15px;
+  font-size: clamp(39px, 5vw, 62px);
+  line-height: 1.05;
+  letter-spacing: -1.6px;
+}
+
+.approach-hero-content > p {
+  max-width: 400px;
+  color: rgba(255, 255, 255, 0.79);
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.approach-hero-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 22px;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+}
+
+.approach-circle-arrow {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  border-radius: 50%;
+  font-size: 22px;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.approach-hero-link:hover .approach-circle-arrow {
+  background: var(--approach-red);
+  border-color: var(--approach-red);
+  transform: rotate(-45deg);
+}
+
+.approach-hero-index {
+  position: absolute;
+  right: 7%;
+  bottom: 18px;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 10px;
+  letter-spacing: 1.5px;
+}
+
+/* Side labels */
+
+.approach-side-label {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.approach-side-label > span {
+  color: var(--approach-red);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.25px;
+  line-height: 1.7;
+}
+
+.approach-side-label > i {
+  width: 1px;
+  height: 38px;
+  margin: 12px 0 10px;
+  background: var(--approach-red);
+}
+
+.approach-side-label > p {
+  color: var(--approach-muted);
+  font-size: 10px;
+  line-height: 1.85;
+  letter-spacing: 1px;
+}
+
+/* Philosophy */
+
+.approach-philosophy {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 28px 5%;
+  display: grid;
+  grid-template-columns: 0.65fr 1.2fr 1.35fr;
+  gap: 28px;
+  align-items: center;
+}
+
+.approach-philosophy-copy h2,
+.approach-solutions-copy h2 {
+  margin: 0 0 14px;
+  font-size: clamp(31px, 3.5vw, 43px);
+  line-height: 1.12;
+  letter-spacing: -1.2px;
+}
+
+.approach-philosophy-copy > p,
+.approach-solutions-copy > p {
+  margin-bottom: 12px;
+  color: var(--approach-muted);
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+.approach-philosophy-image {
+  height: 195px;
+  overflow: hidden;
+  background: #ded4c5;
+}
+
+/* Process heading */
+
+.approach-process {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 28px 5%;
+  border-top: 1px solid var(--approach-border);
+  border-bottom: 1px solid var(--approach-border);
+}
+
+.approach-section-heading {
+  display: grid;
+  grid-template-columns: 0.7fr 1.15fr 1.2fr;
+  gap: 25px;
+  align-items: start;
+  margin-bottom: 25px;
+}
+
+.approach-section-heading > h2 {
+  margin: 0;
+  font-size: clamp(32px, 3.8vw, 45px);
+  line-height: 1.12;
+  letter-spacing: -1.2px;
+}
+
+.approach-section-heading > p {
+  padding-top: 4px;
+  color: var(--approach-muted);
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+/* Process cards */
+
+.approach-steps {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.approach-step {
+  position: relative;
+  min-width: 0;
+  padding: 15px 12px 18px;
+  text-align: center;
+  border: 1px solid var(--approach-border);
+  background: rgba(255, 255, 255, 0.17);
+  transition: background 0.25s, transform 0.25s;
+}
+
+.approach-step:hover {
+  background: #fffaf3;
+  transform: translateY(-3px);
+}
+
+.approach-step-icon {
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  margin: 0 auto 10px;
+  border: 1px solid #e9c8c2;
+  border-radius: 50%;
+  color: var(--approach-red);
+  font-size: 26px;
+}
+
+.approach-step-number {
+  color: var(--approach-muted);
+  font-size: 10px;
+  letter-spacing: 1.1px;
+}
+
+.approach-step h3 {
+  margin: 7px 0;
+  font-size: 20px;
+  line-height: 1.2;
+}
+
+.approach-step p {
+  color: var(--approach-muted);
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+/* Practical solutions */
+
+.approach-solutions {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 28px 5%;
+  display: grid;
+  grid-template-columns: 1.1fr 0.65fr 1.35fr;
+  gap: 28px;
+  align-items: center;
+  border-bottom: 1px solid var(--approach-border);
+}
+
+.approach-solutions-image {
+  height: 230px;
+  overflow: hidden;
+  background: #ded4c5;
+}
+
+.approach-solutions-copy h2 {
+  font-size: clamp(30px, 3.5vw, 42px);
+}
+
+.approach-solutions-copy ul {
+  display: grid;
+  gap: 11px;
+  list-style: none;
+  padding: 0;
+  margin: 17px 0;
+}
+
+.approach-solutions-copy li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  color: #57524c;
+  font-size: 11px;
+  line-height: 1.65;
+}
+
+.approach-solutions-copy li > span {
+  width: 17px;
+  height: 17px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--approach-red);
+  border-radius: 50%;
+  color: var(--approach-red);
+  font-size: 10px;
+}
+
+/* Client categories */
+
+.approach-clients {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 30px 5%;
+}
+
+.approach-client-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 15px;
+}
+
+.approach-client-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  min-width: 0;
+  padding: 19px 16px;
+  border: 1px solid var(--approach-border);
+  background: rgba(255, 255, 255, 0.16);
+  transition: background 0.25s, border-color 0.25s;
+}
+
+.approach-client-card:hover {
+  background: #fffaf3;
+  border-color: #d8b7b0;
+}
+
+.approach-client-icon {
+  color: var(--approach-red);
+  font-size: 29px;
+  line-height: 1.2;
+  flex-shrink: 0;
+}
+
+.approach-client-copy {
+  flex: 1;
+  min-width: 0;
+}
+
+.approach-client-copy h3 {
+  margin: 2px 0 7px;
+  font-size: 19px;
+}
+
+.approach-client-copy p {
+  color: var(--approach-muted);
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+.approach-client-arrow {
+  width: 32px;
+  height: 32px;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  border: 1px solid #e9c8c2;
+  border-radius: 50%;
+  color: var(--approach-red);
+  font-size: 17px;
+  transition: background 0.25s, color 0.25s;
+}
+
+.approach-client-arrow:hover {
+  background: var(--approach-red);
+  color: #fff;
+}
+
+/* Final CTA */
+
+.approach-cta {
+  position: relative;
+  isolation: isolate;
+  min-height: 265px;
+  padding: 35px 7%;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  background: #17130f;
+}
+
+.approach-cta-bg {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(12, 11, 9, 0.97) 0%,
+      rgba(12, 11, 9, 0.84) 45%,
+      rgba(12, 11, 9, 0.24) 100%
+    ),
+    url("../../assets/approach/approach-cta.png") center / cover no-repeat;
+}
+
+.approach-cta-content {
+  max-width: 550px;
+}
+
+.approach-cta h2 {
+  margin: 15px 0 12px;
+  font-size: clamp(35px, 4.4vw, 49px);
+  line-height: 1.1;
+  letter-spacing: -1px;
+}
+
+.approach-cta-content > p {
+  max-width: 420px;
+  margin-bottom: 18px;
+  color: rgba(255, 255, 255, 0.76);
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+.approach-primary-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  min-height: 42px;
+  padding: 10px 15px;
+  border: 1px solid var(--approach-red);
+  background: var(--approach-red);
+  color: #fff;
+  font-size: 12px;
+  transition: background 0.25s, color 0.25s;
+}
+
+.approach-primary-button span {
+  font-size: 18px;
+}
+
+.approach-primary-button:hover {
+  background: transparent;
+  color: #fff;
+}
+
+/* Tablet */
+
+@media (max-width: 1000px) {
+  .approach-philosophy {
+    grid-template-columns: 0.6fr 1.2fr;
+    gap: 22px;
+  }
+
+  .approach-philosophy-image {
+    grid-column: 2;
+  }
+
+  .approach-section-heading {
+    grid-template-columns: 0.65fr 1.15fr;
+    gap: 20px;
+  }
+
+  .approach-section-heading > p {
+    grid-column: 2;
+  }
+
+  .approach-steps {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .approach-solutions {
+    grid-template-columns: 0.9fr 0.6fr 1.3fr;
+    gap: 18px;
+  }
+
+  .approach-client-card {
+    gap: 10px;
+    padding: 15px 12px;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 700px) {
+  .approach-hero {
+    min-height: 420px;
+    padding: 38px 6%;
+  }
+
+  .approach-hero-bg {
+    background:
+      linear-gradient(
+        90deg,
+        rgba(12, 11, 9, 0.95),
+        rgba(12, 11, 9, 0.67)
+      ),
+      url("/images/approach-hero.png") 62% center / cover no-repeat;
+  }
+
+  .approach-hero h1 {
+    font-size: clamp(36px, 8.8vw, 48px);
+    letter-spacing: -1.2px;
+  }
+
+  .approach-hero-content > p {
+    font-size: 12px;
+  }
+
+  .approach-hero-index {
+    right: 6%;
+  }
+
+  .approach-philosophy {
+    grid-template-columns: 1fr;
+    gap: 17px;
+    padding: 27px 5%;
+  }
+
+  .approach-philosophy-image {
+    grid-column: auto;
+    height: 220px;
+  }
+
+  .approach-philosophy-copy h2,
+  .approach-solutions-copy h2 {
+    font-size: 35px;
+  }
+
+  .approach-side-label > i {
+    height: 23px;
+    margin: 8px 0;
+  }
+
+  .approach-side-label > p {
+    display: none;
+  }
+
+  .approach-process {
+    padding: 27px 5%;
+  }
+
+  .approach-section-heading {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+
+  .approach-section-heading > h2 {
+    font-size: 36px;
+  }
+
+  .approach-section-heading > p {
+    grid-column: auto;
+  }
+
+  .approach-steps {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .approach-step {
+    padding: 15px 11px;
+  }
+
+  .approach-step h3 {
+    font-size: 19px;
+  }
+
+  .approach-step p {
+    font-size: 11px;
+  }
+
+  .approach-solutions {
+    grid-template-columns: 1fr;
+    gap: 17px;
+    padding: 27px 5%;
+  }
+
+  .approach-solutions-image {
+    height: 220px;
+  }
+
+  .approach-solutions-copy ul {
+    gap: 12px;
+  }
+
+  .approach-clients {
+    padding: 27px 5%;
+  }
+
+  .approach-client-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .approach-client-card {
+    padding: 17px 14px;
+  }
+
+  .approach-client-copy h3 {
+    font-size: 20px;
+  }
+
+  .approach-cta {
+    min-height: 280px;
+    padding: 32px 6%;
+  }
+
+  .approach-cta-bg {
+    background:
+      linear-gradient(
+        90deg,
+        rgba(12, 11, 9, 0.96),
+        rgba(12, 11, 9, 0.7)
+      ),
+      url("/images/approach-cta.png") center / cover no-repeat;
+  }
+
+  .approach-cta h2 {
+    font-size: 38px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .approach-page *,
+  .approach-page *::before,
+  .approach-page *::after {
+    transition-duration: 0.01ms !important;
+  }
+}

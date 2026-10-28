@@ -1,0 +1,66 @@
+
+/* Scroll reveal */
+[data-reveal],
+[data-stagger-item] {
+  opacity: 0;
+  transform: translate3d(0, 32px, 0);
+  transition:
+    opacity 750ms ease,
+    transform 750ms cubic-bezier(0.22, 1, 0.36, 1);
+  transition-delay: var(--hol-reveal-delay, 0ms);
+  will-change: opacity, transform;
+}
+
+[data-reveal="down"] {
+  transform: translate3d(0, -32px, 0);
+}
+
+[data-reveal="left"] {
+  transform: translate3d(32px, 0, 0);
+}
+
+[data-reveal="right"] {
+  transform: translate3d(-32px, 0, 0);
+}
+
+[data-reveal="none"] {
+  transform: none;
+}
+
+[data-reveal].hol-is-visible,
+[data-stagger-item].hol-is-visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+/* Image zoom */
+[data-image-zoom] {
+  overflow: hidden;
+}
+
+[data-image-zoom] img {
+  transform: scale(1.08);
+  transition: transform 1000ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+[data-image-zoom].hol-image-in-view img {
+  transform: scale(1);
+}
+
+/* Parallax */
+[data-parallax] {
+  transform: translate3d(0, var(--hol-parallax-y, 0px), 0);
+  will-change: transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal],
+  [data-stagger-item],
+  [data-image-zoom] img,
+  [data-parallax] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+    will-change: auto;
+  }
+}

@@ -95,6 +95,17 @@ const practices = [
     image: image8,
     alt: "Legal compliance books",
   },
+  
+{
+  number: "09",
+  title: "Supreme Court Litigation & SLPs",
+  description:
+    "Supreme Court litigation, Special Leave Petitions, constitutional issues and challenges to judgments and orders.",
+  icon: Landmark,
+  image: image1,
+  alt: "Supreme Court and constitutional law",
+},
+
 ];
 
 const steps = [
@@ -243,6 +254,56 @@ export default function PracticeAreas() {
           })}
         </div>
       </section>
+
+      
+{/* Supreme Court Litigation and SLPs */}
+<section className="pa-slp-section" id="supreme-court-slps">
+  <div className="pa-slp-label">
+    <span className="pa-kicker">03 / SUPREME COURT PRACTICE</span>
+    <span className="pa-intro-rule" />
+    <p>
+      SUPREME COURT
+      <br />
+      LITIGATION
+    </p>
+  </div>
+
+  <div className="pa-slp-content">
+    <h2>
+      Supreme Court Litigation and
+      <br />
+      <em>Special Leave Petitions (SLPs)</em>
+    </h2>
+
+    <p>
+      Hari Om Legal conducts litigation before the Hon’ble Supreme
+      Court of India, including matters involving substantial
+      questions of law, constitutional issues, and challenges to
+      judgments and orders of courts and tribunals. We assist
+      clients in assessing the merits of a proposed challenge,
+      identifying the relevant questions of law, analysing the
+      impugned judgment or order, and determining the most
+      appropriate course of action in accordance with procedural
+      requirements.
+    </p>
+
+    <p>
+      Our services include the preparation, drafting, and filing
+      of Special Leave Petitions (SLPs) before the Hon’ble Supreme
+      Court, where legally maintainable. We help clients challenge
+      judgments, decrees, and orders by formulating sound grounds
+      of challenge and presenting the facts and legal issues with
+      clarity. Our work extends to preparing petitions, compiling
+      case records and supporting documents, drafting applications
+      for interim relief where warranted, and appearing in
+      proceedings before the Court. Throughout, we focus on clear,
+      well-researched, and legally sustainable arguments, with
+      close attention to procedural compliance, limitation periods,
+      and the specific requirements of Supreme Court practice.
+    </p>
+  </div>
+</section>
+
 
       {/* How we work */}
       <section className="pa-process" id="pa-approach">

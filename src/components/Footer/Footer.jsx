@@ -13,7 +13,7 @@ import {
   FaWhatsapp,
 } from "react-icons/fa";
 
-import logo from "../../assets/hol-logo.png";
+import logo from "../../assets/footer/logo.png";
 import "./Footer.css";
 
 const quickLinks = [
