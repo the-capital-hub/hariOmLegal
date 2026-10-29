@@ -685,3 +685,340 @@
     transition-duration: 0.01ms !important;
   }
 }
+
+/* HARI OM LEGAL RESPONSIVE REFINEMENTS */
+
+.approach-page {
+  width: 100%;
+  overflow-x: clip;
+}
+
+.approach-page h1 em,
+.approach-page h2 em {
+  font-style: normal;
+}
+
+/* Keep all visible text readable */
+
+.approach-eyebrow,
+.approach-hero-link,
+.approach-hero-index,
+.approach-side-label > span,
+.approach-side-label > p,
+.approach-step-number,
+.approach-step p,
+.approach-solutions-copy li,
+.approach-solutions-copy li > span {
+  font-size: 12px;
+}
+
+/* Desktop spacing */
+
+.approach-hero,
+.approach-cta {
+  padding-left: 70px;
+  padding-right: 70px;
+}
+
+.approach-hero-index {
+  right: 70px;
+}
+
+.approach-philosophy,
+.approach-process,
+.approach-solutions,
+.approach-clients {
+  padding-left: 70px;
+  padding-right: 70px;
+}
+
+/* Images */
+
+.approach-philosophy-image,
+.approach-solutions-image {
+  min-width: 0;
+}
+
+.approach-philosophy-image img,
+.approach-solutions-image img {
+  transition: transform 500ms ease;
+}
+
+.approach-philosophy-image:hover img,
+.approach-solutions-image:hover img {
+  transform: scale(1.025);
+}
+
+/* Tablet */
+
+@media (max-width: 1000px) {
+  .approach-hero,
+  .approach-cta {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .approach-hero-index {
+    right: 40px;
+  }
+
+  .approach-philosophy,
+  .approach-process,
+  .approach-solutions,
+  .approach-clients {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .approach-philosophy {
+    grid-template-columns: minmax(0, 0.65fr) minmax(0, 1.35fr);
+  }
+
+  .approach-philosophy-image {
+    grid-column: 2;
+    width: 100%;
+  }
+
+  .approach-section-heading {
+    grid-template-columns: minmax(0, 0.7fr) minmax(0, 1.3fr);
+  }
+
+  .approach-section-heading > p {
+    grid-column: 2;
+  }
+
+  .approach-steps {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .approach-solutions {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr);
+  }
+
+  .approach-solutions-image {
+    grid-column: 1;
+  }
+
+  .approach-solutions > .approach-side-label {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .approach-solutions-copy {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    min-width: 0;
+  }
+
+  .approach-client-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 700px) {
+  .approach-hero,
+  .approach-cta {
+    /* padding-left: 20px;
+    padding-right: 20px; */
+  }
+
+  .approach-hero {
+    min-height: 420px;
+    /* padding-top: 30px;
+    padding-bottom: 45px; */
+  }
+
+  .approach-hero-bg {
+    background:
+      linear-gradient(
+        90deg,
+        rgba(12, 11, 9, 0.95),
+        rgba(12, 11, 9, 0.72)
+      ),
+      url("../../assets/approach/approach-hero.png") 62% center / cover no-repeat;
+  }
+
+  .approach-hero h1 {
+    font-size: clamp(34px, 8.5vw, 46px);
+    letter-spacing: -0.8px;
+    line-height: 1.1;
+  }
+
+  .approach-hero-content > p,
+  .approach-section-heading > p,
+  .approach-philosophy-copy > p,
+  .approach-solutions-copy > p,
+  .approach-solutions-copy li,
+  .approach-client-copy p,
+  .approach-cta-content > p {
+    font-size: 12px;
+    line-height: 1.8;
+  }
+
+  .approach-eyebrow,
+  .approach-hero-link,
+  .approach-hero-index,
+  .approach-side-label > span {
+    font-size: 12px;
+  }
+
+  .approach-hero-index {
+    right: 20px;
+    bottom: 15px;
+  }
+
+  .approach-philosophy,
+  .approach-process,
+  .approach-solutions,
+  .approach-clients {
+    padding: 20px;
+  }
+
+  .approach-philosophy {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 18px;
+  }
+
+  .approach-philosophy-image {
+    grid-column: auto;
+    height: 220px;
+  }
+
+  .approach-philosophy-copy h2,
+  .approach-solutions-copy h2 {
+    font-size: clamp(30px, 7.5vw, 38px);
+    line-height: 1.15;
+    letter-spacing: -0.5px;
+  }
+
+  .approach-side-label > i {
+    height: 22px;
+    margin: 8px 0;
+  }
+
+  .approach-side-label > p {
+    display: none;
+  }
+
+  .approach-section-heading {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 14px;
+    margin-bottom: 20px;
+  }
+
+  .approach-section-heading > p {
+    grid-column: auto;
+  }
+
+  .approach-section-heading > h2 {
+    font-size: clamp(30px, 7.5vw, 38px);
+  }
+
+  .approach-steps {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .approach-step {
+    padding: 15px 10px;
+  }
+
+  .approach-step h3 {
+    font-size: 18px;
+  }
+
+  .approach-step p {
+    font-size: 12px;
+    overflow-wrap: anywhere;
+  }
+
+  .approach-solutions {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 18px;
+  }
+
+  .approach-solutions-image,
+  .approach-solutions > .approach-side-label,
+  .approach-solutions-copy {
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  .approach-solutions-image {
+    height: 220px;
+  }
+
+  .approach-solutions-copy ul {
+    gap: 12px;
+  }
+
+  .approach-client-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
+  }
+
+  .approach-client-card {
+    padding: 16px 14px;
+  }
+
+  .approach-client-copy h3 {
+    font-size: 19px;
+  }
+
+  .approach-cta {
+    min-height: 280px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  .approach-cta-bg {
+    background:
+      linear-gradient(
+        90deg,
+        rgba(12, 11, 9, 0.96),
+        rgba(12, 11, 9, 0.72)
+      ),
+      url("../../assets/approach/approach-cta.png") center / cover no-repeat;
+  }
+
+  .approach-cta h2 {
+    font-size: clamp(32px, 8vw, 40px);
+  }
+}
+
+/* Very small phones */
+
+@media (max-width: 380px) {
+  .approach-philosophy,
+  .approach-process,
+  .approach-solutions,
+  .approach-clients {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .approach-steps {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .approach-step {
+    text-align: left;
+  }
+
+  .approach-step-icon {
+    margin-left: 0;
+  }
+}
+
+/* Accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+  .approach-page *,
+  .approach-page *::before,
+  .approach-page *::after {
+    transition: none !important;
+    animation: none !important;
+  }
+}

@@ -382,72 +382,126 @@
   transform: translateX(4px);
 }
 
-/* Responsive */
+@media (max-width: 1000px) {
+  .hol-about {
+    padding: 20px 40px;
+  }
 
-@media (max-width: 900px) {
   .hol-about-inner {
     grid-template-columns: 1fr;
-    gap: 34px;
+    gap: 28px;
   }
 
   .hol-about-visual {
-    height: 440px;
+    height: clamp(320px, 55vw, 440px);
+  }
+  .hol-about-copy{
+    padding: 15px;
   }
 
   .hol-about-copy h2 {
-    font-size: clamp(35px, 6vw, 46px);
+    font-size: clamp(32px, 5vw, 46px);
   }
 }
 
-@media (max-width: 520px) {
+@media (max-width: 600px) {
   .hol-about {
-    padding: 42px 18px;
+    padding: 20px;
+  }
+
+  .hol-about-inner {
+    gap: 24px;
   }
 
   .hol-about-visual {
-    height: 390px;
+    height: 360px;
   }
 
   .hol-about-seal {
-    left: 18px;
+    left: 16px;
+    bottom: 82px;
+    padding-left: 12px;
+  }
+
+  .hol-about-seal > strong {
+    font-size: 21px;
   }
 
   .hol-about-caption {
-    right: 17px;
-    left: 17px;
+    right: 16px;
+    left: 16px;
     align-items: flex-start;
     flex-direction: column;
     gap: 7px;
+    padding-top: 10px;
   }
 
   .hol-about-caption > p {
+    font-size: 12px;
     text-align: left;
   }
 
   .hol-about-copy h2 {
-    font-size: 35px;
-    letter-spacing: -0.6px;
+    margin: 16px 0;
+    font-size: clamp(30px, 8vw, 38px);
+    line-height: 1.15;
+    letter-spacing: -0.5px;
   }
 
   .hol-about-lead {
-    font-size: 15px;
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .hol-about-description {
+    font-size: 12px;
+    line-height: 1.8;
+  }
+
+  .hol-about-proof {
+    margin-top: 20px;
   }
 
   .hol-about-proof-item {
     gap: 8px;
-    padding-right: 8px;
+    padding: 14px 8px 14px 0;
   }
 
   .hol-about-proof-item:nth-child(even) {
     padding-left: 10px;
   }
 
-  .hol-about-proof-item h3 {
-    font-size: 12px;
-  }
-
+  .hol-about-proof-item h3,
   .hol-about-proof-item p {
     font-size: 12px;
+    line-height: 1.6;
+  }
+
+  .hol-about-link {
+    margin-top: 20px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 360px) {
+  .hol-about {
+    padding: 20px 14px;
+  }
+
+  .hol-about-visual {
+    height: 320px;
+  }
+
+  .hol-about-proof {
+    grid-template-columns: 1fr;
+  }
+
+  .hol-about-proof-item:nth-child(odd) {
+    border-right: 0;
+  }
+
+  .hol-about-proof-item:nth-child(even) {
+    padding-left: 0;
   }
 }
 
@@ -455,10 +509,9 @@
   .hol-about-visual > img,
   .hol-about-link,
   .hol-about-link svg {
-    transition: none;
+    transition: none !important;
   }
 }
-
 
 /* Practice areas */
 
@@ -1106,7 +1159,7 @@
 
 @media (max-width: 640px) {
   .hol-offices {
-    padding: 34px 0 22px;
+    padding: 0px 0 0px;
   }
 
   .hol-offices-inner {
@@ -1151,7 +1204,9 @@
   }
 
   .hol-office-content {
+    
     padding: 17px;
+    margin: 10px;
   }
 
   .hol-office-content h3 {
@@ -1653,7 +1708,7 @@
   }
 
   .hol-offices-heading {
-    padding: 20px 0;
+    padding: 0px 0;
     gap: 16px;
   }
 
@@ -1722,3 +1777,351 @@
   }
 }
 
+
+
+
+
+/* HARI OM LEGAL OFFICES RESPONSIVE */
+
+.hol-offices,
+.hol-offices * {
+  box-sizing: border-box;
+}
+
+.hol-offices {
+  width: 100%;
+  padding: 20px 70px;
+  overflow: hidden;
+}
+
+.hol-offices-inner {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.hol-offices-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 32px;
+  padding: 20px 0;
+}
+
+.hol-offices-heading-main,
+.hol-offices-heading-side {
+  min-width: 0;
+}
+
+.hol-offices-heading-main h2 {
+  margin: 14px 0 0;
+  font-size: clamp(32px, 3.5vw, 48px);
+  line-height: 1.15;
+  overflow-wrap: anywhere;
+}
+
+.hol-offices-heading-main h2 em {
+  font-style: normal;
+}
+
+.hol-offices-heading-side {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  max-width: 490px;
+}
+
+.hol-offices-heading-side p {
+  max-width: 350px;
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.hol-offices-city-count {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.hol-offices-city-count strong {
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.hol-offices-city-count span {
+  font-size: 12px;
+}
+
+.hol-office-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.hol-office-card {
+  min-width: 0;
+  overflow: hidden;
+}
+
+.hol-office-image {
+  position: relative;
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+}
+
+.hol-office-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 500ms ease;
+}
+
+.hol-office-image:hover img {
+  transform: scale(1.04);
+}
+
+.hol-office-image-shade {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.hol-office-index,
+.hol-office-image-link,
+.hol-office-image-caption {
+  position: absolute;
+  z-index: 1;
+}
+
+.hol-office-index {
+  top: 14px;
+  left: 14px;
+  font-size: 12px;
+  color: #fff;
+}
+
+.hol-office-image-link {
+  top: 12px;
+  right: 12px;
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+  color: #fff;
+}
+
+.hol-office-image-caption {
+  bottom: 14px;
+  left: 14px;
+  color: #fff;
+  font-size: 12px;
+  letter-spacing: 1.2px;
+}
+
+.hol-office-content {
+  min-width: 0;
+  padding: 16px 0 18px;
+}
+
+.hol-office-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.hol-office-label {
+  font-size: 12px;
+  overflow-wrap: anywhere;
+}
+
+.hol-office-meta svg {
+  flex-shrink: 0;
+}
+
+.hol-office-content h3 {
+  margin: 10px 0;
+  font-size: 24px;
+  overflow-wrap: anywhere;
+}
+
+.hol-office-address {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.75;
+  overflow-wrap: anywhere;
+}
+
+.hol-office-map-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 14px;
+  font-size: 12px;
+  text-decoration: none;
+}
+
+.hol-offices-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 14px;
+  padding: 20px 0;
+  margin-top: 10px;
+  border-top: 1px solid rgba(100, 90, 80, 0.2);
+}
+
+.hol-offices-bottom > span,
+.hol-offices-bottom p,
+.hol-offices-bottom a {
+  font-size: 12px;
+}
+
+.hol-offices-bottom p {
+  margin: 0;
+  line-height: 1.7;
+}
+
+.hol-offices-bottom a {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  flex-shrink: 0;
+  text-decoration: none;
+}
+
+/* Tablet */
+
+@media (max-width: 1000px) {
+  .hol-offices {
+    padding: 10px 10px;
+  }
+
+  .hol-offices-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .hol-offices-heading-side {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .hol-office-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 26px 20px;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+  .hol-offices {
+    padding: 0px;
+  }
+
+  .hol-offices-heading {
+    padding: 20px 0;
+    gap: 16px;
+  }
+
+  .hol-offices-heading-main h2 {
+    font-size: clamp(29px, 8vw, 37px);
+    letter-spacing: -0.5px;
+    line-height: 1.15;
+  }
+
+  .hol-offices-heading-side {
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .hol-offices-heading-side p {
+    flex: 1;
+    min-width: 0;
+    font-size: 12px;
+    line-height: 1.75;
+  }
+
+  .hol-offices-city-count {
+    gap: 5px;
+  }
+
+  .hol-offices-city-count strong {
+    font-size: 22px;
+  }
+
+  .hol-offices-city-count span {
+    font-size: 12px;
+  }
+
+  .hol-office-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 18px;
+  }
+
+  .hol-office-image {
+    aspect-ratio: 16 / 10;
+  }
+
+  .hol-office-content {
+    padding: 13px 0 18px;
+  }
+
+  .hol-office-content h3 {
+    margin: 9px 0;
+    font-size: 23px;
+  }
+
+  .hol-office-address {
+    font-size: 12px;
+    line-height: 1.75;
+  }
+
+  .hol-offices-bottom {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+    padding: 20px 0;
+  }
+}
+
+/* Extra small phones */
+
+@media (max-width: 360px) {
+  .hol-offices {
+    padding: 20px 14px;
+  }
+
+  .hol-offices-heading-main h2 {
+    font-size: 28px;
+  }
+
+  .hol-offices-heading-side {
+    flex-direction: column;
+  }
+
+  .hol-office-image {
+    aspect-ratio: 4 / 3;
+  }
+}
+
+/* Reduced motion */
+
+@media (prefers-reduced-motion: reduce) {
+  .hol-offices *,
+  .hol-offices *::before,
+  .hol-offices *::after {
+    transition: none !important;
+  }
+}
