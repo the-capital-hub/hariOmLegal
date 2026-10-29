@@ -171,32 +171,77 @@
   margin-bottom: 25px;
 }
 
+
+/* Contact Editorial Side Label */
+
 .contact-side-label {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  position: relative;
+  padding: 8px 0 8px 18px;
+  border-left: 2px solid var(--contact-red, #cf3329);
+  gap: 10px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .contact-side-label > span {
-  font-size: 10px;
+  font-family: "DM Sans", sans-serif;
+  font-size: 12px;
   font-weight: 700;
-  letter-spacing: 1.2px;
-  color: var(--contact-red);
-  line-height: 1.6;
+  letter-spacing: 1.6px;
+  color: var(--contact-red, #cf3329);
+  line-height: 1.7;
+  text-transform: uppercase;
+  font-style: normal;
 }
 
 .contact-side-label > div {
-  width: 1px;
-  height: 37px;
-  background: var(--contact-red);
-  margin: 12px 0 9px;
+  display: block;
+  width: 42px;
+  height: 1px;
+  flex-shrink: 0;
+  background: var(--contact-red, #cf3329);
+  margin: 4px 0;
 }
 
 .contact-side-label > p {
   color: var(--contact-muted);
-  font-size: 10px;
-  line-height: 1.8;
-  letter-spacing: 1px;
+  font-family: "DM Sans", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.85;
+  letter-spacing: 0.5px;
+  font-style: normal;
+  max-width: 280px;
+  margin: 0;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .contact-side-label {
+    padding-left: 14px;
+    gap: 8px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .contact-side-label {
+    padding-left: 12px;
+    gap: 8px;
+  }
+
+  .contact-side-label > span {
+    font-size: 12px;
+    letter-spacing: 1.3px;
+  }
+
+  .contact-side-label > p {
+    font-size: 12px;
+    line-height: 1.8;
+  }
 }
 
 .contact-section-heading > h2 {

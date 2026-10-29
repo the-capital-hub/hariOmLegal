@@ -104,7 +104,7 @@
    position: relative;
   isolation: isolate;
   min-height: 385px;
-  padding: 45px 7%;
+  padding: 20px 40px;
   display: flex;
   align-items: center;
   color: #fff;
@@ -242,7 +242,7 @@
   gap: clamp(24px, 4vw, 58px);
   max-width: 1500px;
   margin: 0 auto;
-  padding: 76px 6%;
+  padding: 20px 40px;
 }
 
 .team-intro-kicker {
@@ -315,7 +315,7 @@
 /* Principles */
 
 .team-principles {
-  padding: 55px 8% 60px;
+  padding: 20px 40px;
   color:var(--team-ink);
   background: var(--team-line);
 }
@@ -391,7 +391,7 @@
 .team-directory {
   max-width: 1500px;
   margin: 0 auto;
-  padding: 76px 6% 72px;
+  padding: 20px 40px;
   scroll-margin-top: 30px;
 }
 
@@ -665,7 +665,7 @@
   grid-template-columns: 1fr 1fr;
   align-items: center;
   gap: clamp(28px, 6vw, 90px);
-  padding: 68px 10%;
+  padding: 20px 40px;
   border-top: 1px solid var(--team-line);
   border-bottom: 1px solid var(--team-line);
   background: #eee6dc;
@@ -727,7 +727,7 @@
   display: flex;
   min-height: 370px;
   align-items: center;
-  padding: 66px 8%;
+  padding: 20px 40px;
   overflow: hidden;
   isolation: isolate;
   color: #fff;

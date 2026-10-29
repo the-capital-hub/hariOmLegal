@@ -83,7 +83,7 @@
   position: relative;
   isolation: isolate;
   min-height: 385px;
-  padding: 45px 7%;
+  padding: 20px 40px;
   display: flex;
   align-items: center;
   color: #fff;
@@ -161,40 +161,85 @@
 
 /* Side labels */
 
+/* Approach Editorial Side Label */
+
 .approach-side-label {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  position: relative;
+  padding: 8px 0 8px 18px;
+  border-left: 2px solid var(--approach-red, #cf3329);
+  gap: 10px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .approach-side-label > span {
-  color: var(--approach-red);
-  font-size: 10px;
+  color: var(--approach-red, #cf3329);
+  font-family: "DM Sans", sans-serif;
+  font-size: 12px;
   font-weight: 700;
-  letter-spacing: 1.25px;
+  letter-spacing: 1.6px;
   line-height: 1.7;
+  text-transform: uppercase;
+  font-style: normal;
 }
 
 .approach-side-label > i {
-  width: 1px;
-  height: 38px;
-  margin: 12px 0 10px;
-  background: var(--approach-red);
+  display: block;
+  width: 42px;
+  height: 1px;
+  flex-shrink: 0;
+  margin: 4px 0;
+  background: var(--approach-red, #cf3329);
 }
 
 .approach-side-label > p {
   color: var(--approach-muted);
-  font-size: 10px;
+  font-family: "DM Sans", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
   line-height: 1.85;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
+  font-style: normal;
+  max-width: 280px;
+  margin: 0;
 }
+
+/* Tablet */
+@media (max-width: 900px) {
+  .approach-side-label {
+    padding-left: 14px;
+    gap: 8px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .approach-side-label {
+    padding-left: 12px;
+    gap: 8px;
+  }
+
+  .approach-side-label > span {
+    font-size: 12px;
+    letter-spacing: 1.3px;
+  }
+
+  .approach-side-label > p {
+    font-size: 12px;
+    line-height: 1.8;
+  }
+}
+
 
 /* Philosophy */
 
 .approach-philosophy {
   max-width: 1500px;
   margin: 0 auto;
-  padding: 28px 5%;
+  padding: 20px 40px;
   display: grid;
   grid-template-columns: 0.65fr 1.2fr 1.35fr;
   gap: 28px;
@@ -228,7 +273,7 @@
 .approach-process {
   max-width: 1500px;
   margin: 0 auto;
-  padding: 28px 5%;
+  padding: 20px 40px;
   border-top: 1px solid var(--approach-border);
   border-bottom: 1px solid var(--approach-border);
 }
@@ -313,7 +358,7 @@
 .approach-solutions {
   max-width: 1500px;
   margin: 0 auto;
-  padding: 28px 5%;
+  padding: 20px 40px;
   display: grid;
   grid-template-columns: 1.1fr 0.65fr 1.35fr;
   gap: 28px;
@@ -365,7 +410,7 @@
 .approach-clients {
   max-width: 1500px;
   margin: 0 auto;
-  padding: 30px 5%;
+  padding: 20px 40px;
 }
 
 .approach-client-grid {
@@ -437,7 +482,7 @@
   position: relative;
   isolation: isolate;
   min-height: 265px;
-  padding: 35px 7%;
+  padding: 20px 40px;
   display: flex;
   align-items: center;
   color: #fff;

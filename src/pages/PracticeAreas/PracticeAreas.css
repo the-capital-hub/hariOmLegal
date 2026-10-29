@@ -90,7 +90,7 @@
 .pa-hero-content {
   width: min(600px, 65%);
   margin-left: 7.8%;
-  padding: 35px 0 48px;
+  padding: 20px 40px;
   animation: paContentReveal 0.8s 0.1s ease both;
 }
 
@@ -207,42 +207,143 @@
   background: var(--pa-paper);
 }
 
+
+
 .pa-intro-label {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 18px;
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+  padding-left: 18px;
+  border-left: 2px solid var(--pa-red, #cf3329);
 }
 
 .pa-intro-label p,
 .pa-process-label p {
-  margin-bottom: 0;
+  margin: 0;
   color: var(--pa-muted);
-  font-size: 9px;
+  font-family: "DM Sans", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
   letter-spacing: 0.1em;
-  line-height: 1.7;
+  line-height: 1.8;
+  font-style: normal;
 }
 
 .pa-intro-heading h2 {
-  margin: -4px 0 0;
+  margin: 0;
   font-size: clamp(32px, 3.5vw, 45px);
-  letter-spacing: -0.04em;
-  line-height: 1.08;
+  font-weight: 400;
+  letter-spacing: -0.035em;
+  line-height: 1.12;
+  font-style: normal;
+  overflow-wrap: break-word;
 }
 
 .pa-intro-heading h2 em {
-  white-space: nowrap;
+  white-space: normal;
+  font-style: normal;
 }
 
 .pa-intro-copy {
   padding-top: 4px;
+  min-width: 0;
 }
 
 .pa-intro-copy p {
-  margin-bottom: 12px;
+  margin: 0 0 12px;
   color: var(--pa-muted);
-  font-size: 11px;
-  line-height: 1.8;
+  font-family: "DM Sans", sans-serif;
+  font-size: 12px;
+  line-height: 1.85;
+  font-style: normal;
+}
+
+.pa-intro-copy p:last-child {
+  margin-bottom: 0;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .pa-intro-label {
+    gap: 14px;
+    padding-left: 14px;
+  }
+
+  .pa-intro-heading h2 {
+    font-size: clamp(30px, 4.5vw, 40px);
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .pa-intro-label {
+    gap: 12px;
+    padding-left: 12px;
+  }
+
+  .pa-intro-label p,
+  .pa-process-label p {
+    font-size: 12px;
+    letter-spacing: 0.07em;
+  }
+
+  .pa-intro-heading h2 {
+    font-size: clamp(28px, 8vw, 34px);
+    line-height: 1.18;
+    letter-spacing: -0.025em;
+  }
+
+  .pa-intro-heading h2 em {
+    white-space: normal;
+  }
+
+  .pa-intro-copy {
+    padding-top: 0;
+  }
+
+  .pa-intro-copy p {
+    font-size: 12px;
+    line-height: 1.8;
+    margin-bottom: 10px;
+  }
+}
+
+
+/* Mobile */
+@media (max-width: 600px) {
+  .pa-intro-label {
+    gap: 12px;
+  }
+
+  .pa-intro-label p,
+  .pa-process-label p {
+    font-size: 12px;
+    letter-spacing: 0.07em;
+  }
+
+  .pa-intro-heading h2 {
+    font-size: clamp(28px, 8vw, 34px);
+    line-height: 1.18;
+    letter-spacing: -0.025em;
+  }
+
+  .pa-intro-heading h2 em {
+    white-space: normal;
+  }
+
+  .pa-intro-copy {
+    padding-top: 0;
+  }
+
+  .pa-intro-copy p {
+    font-size: 12px;
+    line-height: 1.8;
+    margin-bottom: 10px;
+  }
 }
 
 /* Practice cards */
@@ -936,7 +1037,7 @@
 /* Large desktop: requested 70px side gutters */
 @media (min-width: 1200px) {
   .pa-hero-content {
-    margin-left: 70px;
+    margin-left: 0px;
     padding: 20px 0;
   }
 
@@ -1040,5 +1141,164 @@
   .hol-practice * {
     animation-duration: 0.01ms !important;
     transition-duration: 0.01ms !important;
+  }
+}
+
+/* =========================================
+   PRACTICE AREAS
+   Premium Editorial Refinement
+   ========================================= */
+
+.hol-practice {
+  --pa-label-red: #cf3329;
+  --pa-label-muted: #686361;
+}
+
+/* Shared editorial label styling */
+
+.hol-practice .pa-intro-label,
+.hol-practice .pa-process-label,
+.hol-practice .pa-slp-label {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+/* Intro label */
+
+.hol-practice .pa-intro-label {
+  padding: 8px 0 8px 18px;
+  border-left: 2px solid var(--pa-label-red);
+}
+
+/* Process label */
+
+.hol-practice .pa-process-label {
+  padding: 8px 0 8px 18px;
+  border-left: 2px solid var(--pa-label-red);
+}
+
+/* Supreme Court and SLP label */
+
+.hol-practice .pa-slp-label {
+  padding: 8px 0 8px 18px;
+  border-left: 2px solid var(--pa-label-red);
+}
+
+/* Editorial eyebrow text */
+
+.hol-practice .pa-intro-label > span,
+.hol-practice .pa-process-label > span,
+.hol-practice .pa-slp-label > span {
+  color: var(--pa-label-red);
+  font-family: "DM Sans", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  line-height: 1.7;
+  text-transform: uppercase;
+  font-style: normal;
+}
+
+/* Minimal horizontal divider */
+
+.hol-practice .pa-intro-label .pa-intro-rule,
+.hol-practice .pa-process-label .pa-intro-rule,
+.hol-practice .pa-slp-label .pa-intro-rule {
+  display: block;
+  width: 42px;
+  height: 1px;
+  flex: 0 0 1px;
+  margin: 4px 0;
+  background: var(--pa-label-red);
+}
+
+/* Supporting label text */
+
+.hol-practice .pa-intro-label > p,
+.hol-practice .pa-process-label > p,
+.hol-practice .pa-slp-label > p {
+  max-width: 280px;
+  margin: 0;
+  color: var(--pa-label-muted);
+  font-family: "DM Sans", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  line-height: 1.85;
+  font-style: normal;
+}
+
+/* Keep editorial typography upright */
+
+.hol-practice h1 em,
+.hol-practice h2 em,
+.hol-practice h3 em {
+  font-style: normal;
+}
+
+/* Improve readability across the page */
+
+.hol-practice .pa-eyebrow,
+.hol-practice .pa-explore,
+.hol-practice .pa-hero-index,
+.hol-practice .pa-kicker,
+.hol-practice .pa-card-content > p,
+.hol-practice .pa-process-heading > p,
+.hol-practice .pa-step > p,
+.hol-practice .pa-cta-content > p,
+.hol-practice .pa-cta-button {
+  font-size: 12px;
+}
+
+/* Tablet */
+
+@media (max-width: 900px) {
+  .hol-practice .pa-intro-label,
+  .hol-practice .pa-process-label,
+  .hol-practice .pa-slp-label {
+    padding-left: 14px;
+    gap: 8px;
+  }
+
+  .hol-practice .pa-intro-label > span,
+  .hol-practice .pa-process-label > span,
+  .hol-practice .pa-slp-label > span {
+    letter-spacing: 1.3px;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+  .hol-practice .pa-intro-label,
+  .hol-practice .pa-process-label,
+  .hol-practice .pa-slp-label {
+    padding-left: 12px;
+    gap: 8px;
+  }
+
+  .hol-practice .pa-intro-label > span,
+  .hol-practice .pa-process-label > span,
+  .hol-practice .pa-slp-label > span {
+    font-size: 12px;
+    letter-spacing: 1.2px;
+  }
+
+  .hol-practice .pa-intro-label > p,
+  .hol-practice .pa-process-label > p,
+  .hol-practice .pa-slp-label > p {
+    font-size: 12px;
+    line-height: 1.8;
+  }
+
+  .hol-practice .pa-card-content > p,
+  .hol-practice .pa-step > p {
+    font-size: 12px;
+    line-height: 1.75;
   }
 }
