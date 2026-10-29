@@ -53,7 +53,7 @@
   z-index: 2;
   width: min(760px, 75%);
   margin-left: 6.3%;
-  padding: 30px 0 55px;
+  padding: 30px 0 45px;
   animation: holHeroReveal .85s .1s ease both;
 }
 

@@ -397,3 +397,40 @@ select {
 html body * {
   font-style: normal !important;
 }
+
+/* Global typography */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-size: 16px;
+}
+
+/* Consistent section spacing */
+section {
+  box-sizing: border-box;
+  padding: 20px 60px 0;
+}
+
+/* Prevent text from becoming too small */
+body,
+body p,
+body span,
+body a,
+body li,
+body label,
+body button,
+body input,
+body textarea,
+body small {
+  font-size: max(12px, 1em);
+}
+
+/* Responsive horizontal spacing */
+@media (max-width: 768px) {
+  section {
+    padding: 20px 20px 0;
+  }
+}
