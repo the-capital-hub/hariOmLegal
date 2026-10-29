@@ -1,312 +1,415 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import {
+  Award,
+  ArrowUpRight,
+  Scale,
+  ShieldCheck,
+  MessagesSquare,
+  BookOpen,
+} from "lucide-react";
 import "./OurTeam.css";
 
-// Illustrative placeholders only. Replace these image imports with approved team portraits when available.
 import team1 from "../../assets/about/team-consultation.png";
-import team2 from "../../assets/about/team-meeting.png";
-import team3 from "../../assets/about/team-library.png";
+import team2 from "../../assets/about/team-library.png";
+import team3 from "../../assets/about/team-meeting.png";
+
+import founder from "../../assets/team/Founder.png";
+import Chithra from "../../assets/team/Chithra.png";
+import Sriram from "../../assets/team/Sriram.png";
+import Sandeep from "../../assets/team/Sandeep.png";
+import Prajual from "../../assets/team/Prajual.png";
+import Vijay from "../../assets/team/Vijay.png";
+import Shakir from "../../assets/team/Shakir.png";
 
 const teamMembers = [
-  {
-    name: "Prabhu N Savanur",
-    role: "Founder",
-    description:
-      "Founder of Hari Om Legal, providing leadership and strategic direction to the firm.",
-    image: team1,
-    number: "01",
-    initials: "PS",
-  },
   {
     name: "Chithra Jeyan",
     role: "Associate",
     description:
-      "Part of the Hari Om Legal team, supporting clients across the firm's legal practice areas.",
-    image: team2,
-    number: "02",
-    initials: "CJ",
+      "Supporting clients with careful attention across the firm's legal practice areas.",
+    image: Chithra,
   },
   {
     name: "Sriram S",
     role: "Associate",
     description:
-      "Associate at Hari Om Legal, contributing to legal advisory and client representation.",
-    image: team3,
-    number: "03",
-    initials: "SS",
+      "Contributing to legal advisory, preparation and client representation.",
+    image: Sriram,
   },
   {
     name: "Sandeep K S",
     role: "Associate",
     description:
-      "Associate at Hari Om Legal, supporting the firm's legal matters and client requirements.",
-    image: team1,
-    number: "04",
-    initials: "SK",
+      "Supporting legal matters with diligence and a client focused approach.",
+    image: Sandeep,
   },
   {
     name: "Prajual S",
     role: "Associate",
     description:
-      "Associate at Hari Om Legal, contributing to the firm's client focused legal practice.",
-    image: team2,
-    number: "05",
-    initials: "PS",
+      "Working collaboratively to understand client needs and legal requirements.",
+    image: Prajual,
   },
   {
     name: "S Vijay Kumar",
     role: "Associate",
     description:
-      "Associate at Hari Om Legal, supporting legal matters and client representation.",
-    image: team3,
-    number: "06",
-    initials: "VK",
+      "Supporting legal research, preparation and client service.",
+    image: Vijay,
   },
   {
     name: "Md. Shakir Hussain",
     role: "Associate",
     description:
-      "Associate at Hari Om Legal, supporting clients and the firm's legal practice.",
-    image: team1,
-    number: "07",
-    initials: "MH",
+      "Contributing to thoughtful legal support and client relationships.",
+    image: Shakir,
   },
 ];
 
 const principles = [
   {
-    icon: "♢",
-    title: "Trust",
+    icon: Scale,
+    number: "01",
+    title: "Integrity",
     description:
-      "Building professional relationships through accessibility and communication.",
+      "Ethical judgement and professional responsibility in every interaction.",
   },
   {
-    icon: "⚖",
-    title: "Diligence",
-    description:
-      "Careful preparation and thoughtful attention to every matter.",
-  },
-  {
-    icon: "◇",
-    title: "Responsibility",
-    description: "Client focused support grounded in professional commitment.",
-  },
-  {
-    icon: "♧",
+    icon: MessagesSquare,
+    number: "02",
     title: "Clarity",
     description:
-      "Practical guidance that helps clients understand their options.",
+      "Straightforward communication so clients can make informed decisions.",
+  },
+  {
+    icon: BookOpen,
+    number: "03",
+    title: "Preparation",
+    description:
+      "Careful research and considered attention to every matter.",
+  },
+  {
+    icon: ShieldCheck,
+    number: "04",
+    title: "Discretion",
+    description:
+      "Respect for privacy and responsible handling of client information.",
   },
 ];
+
+function Eyebrow({ children, light = false }) {
+  return (
+    <span
+      className={`team-eyebrow ${
+        light ? "team-eyebrow-light" : ""
+      }`}
+    >
+      <span aria-hidden="true" />
+      {children}
+    </span>
+  );
+}
 
 export default function OurTeam() {
   return (
     <main className="our-team-page">
-      <section className="team-hero">
-        <div className="team-hero-bg" />
+      {/* Hero */}
+      <section
+        className="team-hero"
+        aria-labelledby="team-hero-title"
+      >
+        <div className="team-hero-image" aria-hidden="true" />
+        <div className="team-hero-grain" aria-hidden="true" />
+
         <div className="team-hero-content">
-          <span className="team-eyebrow">
-            <span /> OUR PEOPLE
-          </span>
-          <h1>
-            Meet Our
+          <Eyebrow light>
+            HARI OM LEGAL · OUR PEOPLE
+          </Eyebrow>
+
+          <h1 id="team-hero-title">
+            Good counsel
             <br />
-            <em>Legal Team.</em>
+            begins with <em>good people.</em>
           </h1>
-          <p className="team-hero-subtitle">
-            Experienced Professionals. Dedicated Legal Support.
+
+          <p className="team-hero-lead">
+            A committed team bringing care, preparation and
+            perspective to every client relationship.
           </p>
-          <p>
-            At Hari Om Legal, our team is committed to providing professional,
-            diligent and client focused legal assistance.
-          </p>
-          <a href="#team-directory" className="team-hero-link">
-            <span className="team-circle-arrow">↘</span> MEET THE TEAM
-          </a>
+
+          <div className="team-hero-actions">
+            <a
+              href="#team-directory"
+              className="team-primary-button"
+            >
+              Meet the team
+              <ArrowUpRight size={17} />
+            </a>
+
+            <span className="team-hero-caption">
+              THOUGHTFUL COUNSEL. PERSONAL ATTENTION.
+            </span>
+          </div>
         </div>
-        <span className="team-hero-index">04 / OUR TEAM</span>
+
+        <div className="team-hero-side-note">
+          <span>01</span>
+          <i aria-hidden="true" />
+          THE PEOPLE BEHIND THE PRACTICE
+        </div>
       </section>
 
-      <section className="team-intro">
-        <div className="team-side-label">
-          <span>01 / OUR PEOPLE</span>
-          <i />
-          <p>
-            TRUST
-            <br />
-            ACCESSIBILITY
-            <br />
-            COMMUNICATION
-          </p>
+      {/* Introduction */}
+      {/* <section
+        className="team-intro"
+        aria-labelledby="team-intro-title"
+      >
+        <div className="team-intro-kicker">
+          <span>OUR APPROACH</span>
+          <span className="team-kicker-line" />
         </div>
-        <div className="team-intro-copy">
-          <h2>
-            Experienced People.
-            <br />
-            <em>Shared Purpose.</em>
+
+        <div className="team-intro-main">
+          <h2 id="team-intro-title">
+            Legal experience, with a{" "}
+            <em>human perspective.</em>
           </h2>
+
           <p>
-            We believe strong client relationships are built on trust,
-            accessibility and consistent communication.
-          </p>
-          <p>
-            Our team brings a considered and collaborative perspective to legal
-            work, with a commitment to providing professional support across the
-            firm's practice areas.
+            Every matter has its own context. We listen carefully,
+            work through the details and help clients understand
+            their options with clarity and confidence.
           </p>
         </div>
-        <div className="team-intro-image">
+
+        <figure className="team-intro-photo">
           <img
-            src={team2}
-            alt="Illustrative legal team meeting"
+            src={team3}
+            alt="Legal professionals discussing a matter"
             loading="lazy"
           />
-          <span>Professional support. A shared commitment.</span>
+
+          <figcaption>
+            <span>HARI OM LEGAL</span>
+            <span>Built on trust and diligence</span>
+          </figcaption>
+        </figure>
+      </section> */}
+
+      {/* Principles */}
+      <section
+        className="team-principles"
+        aria-label="Our professional principles"
+      >
+        <div className="team-principles-heading">
+          <Eyebrow light>WHAT GUIDES US</Eyebrow>
+
+          <h2>
+            Principles that shape{" "}
+            <em>our practice.</em>
+          </h2>
+        </div>
+
+        <div className="team-principles-grid">
+          {principles.map((item) => {
+            const Icon = item.icon;
+
+            return (
+              <article
+                className="team-principle"
+                key={item.title}
+              >
+                <div className="team-principle-top">
+                  <Icon size={23} strokeWidth={1.5} />
+                  <span>{item.number}</span>
+                </div>
+
+                <h3>{item.title}</h3>
+                <p>{item.description}</p>
+              </article>
+            );
+          })}
         </div>
       </section>
 
-      <section className="team-stats">
-        {principles.map((item, index) => (
-          <article className="team-stat" key={item.title}>
-            <span className="team-stat-icon">{item.icon}</span>
-            <h3>{item.title}</h3>
-            <strong>
-              {
-                [
-                  "Client relationships",
-                  "Thoughtful preparation",
-                  "Professional standards",
-                  "Practical guidance",
-                ][index]
-              }
-            </strong>
-            <p>{item.description}</p>
-          </article>
-        ))}
-      </section>
-
-      <section className="team-directory" id="team-directory">
+      {/* Team directory */}
+      <section
+        className="team-directory"
+        id="team-directory"
+        aria-labelledby="team-directory-title"
+      >
         <div className="team-directory-heading">
-          <div className="team-side-label">
-            <span>02 / OUR LEGAL TEAM</span>
-            <i />
-            <p>
-              DEDICATED
-              <br />
-              PROFESSIONAL
-              <br />
-              CLIENT FOCUSED
-            </p>
+          <div>
+            <Eyebrow>THE PEOPLE</Eyebrow>
+
+            <h2 id="team-directory-title">
+              Meet the <em>team.</em>
+            </h2>
           </div>
-          <h2>
-            The People
-            <br />
-            <em>Behind the Practice.</em>
-          </h2>
+
           <p>
-            Meet the professionals supporting Hari Om Legal's client focused
-            approach to legal assistance.
+            Different perspectives, one shared commitment to
+            thoughtful legal service and meaningful client
+            relationships.
           </p>
         </div>
+
+        {/* Founder feature */}
+        <article className="team-founder-feature">
+          <div className="team-founder-photo">
+            <img
+              src={founder}
+              alt="Prabhu N Savanur, Founder of Hari Om Legal"
+              loading="lazy"
+            />
+
+            <span className="team-founder-photo-label">
+              FOUNDING LEADERSHIP
+            </span>
+          </div>
+
+          <div className="team-founder-content">
+            <span className="team-member-role">
+              FOUNDER
+            </span>
+
+            <h3>Prabhu N Savanur</h3>
+
+            <p>
+              Providing leadership and strategic direction to
+              Hari Om Legal, with a focus on professional standards
+              and client trust.
+            </p>
+
+            <div className="team-founder-award">
+              <span className="team-award-icon">
+                <Award size={21} strokeWidth={1.6} />
+              </span>
+
+              <span>
+                <strong>Best Legal Mentor</strong>
+                <small>
+                  Karnataka Educational Awards 2026
+                </small>
+              </span>
+            </div>
+
+            <span className="team-founder-signature">
+              Leadership · Integrity · Service
+            </span>
+          </div>
+        </article>
+
+        {/* Associates */}
         <div className="team-members-grid">
           {teamMembers.map((member, index) => (
-            
-<article
-  className={`team-member-card ${
-    index === 0 ? "team-member-card-founder" : ""
-  }`}
-  key={member.number}
-  style={{ "--team-delay": `${(index % 3) * 90}ms` }}
->
-
+            <article
+              className="team-member-card"
+              key={member.name}
+              style={{
+                "--team-delay": `${index * 55}ms`,
+              }}
+            >
               <div className="team-member-image">
                 <img
                   src={member.image}
-                  alt={`Illustrative placeholder for ${member.name}`}
+                  alt={member.name}
                   loading="lazy"
                 />
-                <span className="team-member-number">{member.number}</span>
-                {index === 0 && (
-                  <span className="team-member-founder">FOUNDER</span>
-                )}
-                <span className="team-member-initials" aria-hidden="true">
-                  {member.initials}
+
+                <span className="team-member-index">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+
+                <span
+                  className="team-member-image-arrow"
+                  aria-hidden="true"
+                >
+                  <ArrowUpRight size={18} />
                 </span>
               </div>
+
               <div className="team-member-copy">
-                <span className="team-member-role">{member.role}</span>
+                <span className="team-member-role">
+                  {member.role}
+                </span>
+
                 <h3>{member.name}</h3>
                 <p>{member.description}</p>
               </div>
             </article>
           ))}
         </div>
-        <p className="team-image-note">
-          The current photographs are illustrative placeholders. Replace them
-          with approved team portraits for the final website.
-        </p>
       </section>
 
-      <section className="team-commitment">
-        <div className="team-commitment-image">
+      {/* Commitment */}
+      <section
+        className="team-commitment"
+        aria-labelledby="team-commitment-title"
+      >
+        <div className="team-commitment-photo">
           <img
-            src={team3}
-            alt="Legal reference library representing preparation and knowledge"
+            src={team2}
+            alt="Legal research materials and reference books"
             loading="lazy"
           />
         </div>
-        <div className="team-side-label">
-          <span>03 / OUR COMMITMENT</span>
-          <i />
-          <p>
-            DEDICATION
-            <br />
-            PRECISION
-            <br />
-            RESPONSIBILITY
-          </p>
-        </div>
-        <div className="team-commitment-copy">
-          <h2>
-            Professional Care.
-            <br />
-            <em>Personal Attention.</em>
+
+        <div className="team-commitment-content">
+          <Eyebrow>OUR COMMITMENT</Eyebrow>
+
+          <h2 id="team-commitment-title">
+            Every matter deserves{" "}
+            <em>careful attention.</em>
           </h2>
+
           <p>
-            We approach every engagement with dedication, precision and a strong
-            sense of responsibility, whether assisting an individual with a
-            personal dispute or advising an organisation on a complex commercial
-            matter.
+            We approach each engagement with diligence and
+            responsibility. Our aim is to help clients understand
+            their circumstances, consider available options and
+            decide on their next steps.
           </p>
-          <p>
-            Our focus is on clear communication, careful preparation and a
-            professional working relationship throughout each engagement.
-          </p>
-          <Link to="/approach" className="team-text-link">
-            Discover Our Approach <span>↗</span>
+
+          <Link
+            to="/approach"
+            className="team-text-link"
+          >
+            Explore our approach
+            <ArrowUpRight size={17} />
           </Link>
         </div>
       </section>
 
-      <section className="team-cta">
-        <div className="team-cta-bg" />
+      {/* Final CTA */}
+      <section
+        className="team-cta"
+        aria-labelledby="team-cta-title"
+      >
+        <div className="team-cta-image" aria-hidden="true" />
+
         <div className="team-cta-content">
-          <span className="team-eyebrow">
-            <span /> LET'S WORK TOGETHER
-          </span>
-          <h2>
-            Your Matter Matters.
-            <br />
-            <em>Let's Talk.</em>
+          <Eyebrow light>START A CONVERSATION</Eyebrow>
+
+          <h2 id="team-cta-title">
+            A clearer way <em>forward.</em>
           </h2>
+
           <p>
-            Contact our team to discuss your legal requirements and understand
-            the next steps.
+            Tell us what you need help with. Our team is ready to
+            listen and discuss the next steps.
           </p>
-          <Link to="/contact" className="team-primary-button">
-            Consult an Expert <span>↗</span>
+
+          <Link
+            to="/contact"
+            className="team-primary-button"
+          >
+            Discuss your matter
+            <ArrowUpRight size={17} />
           </Link>
         </div>
+
+        <span className="team-cta-mark">H / O</span>
       </section>
     </main>
   );
