@@ -73,7 +73,7 @@
 .team-eyebrow > span {
    width: 34px;
   height: 2px;
-  background: white;
+  background: var(--team-ink);
   position: relative;
 }
 .team-eyebrow > span::after {
@@ -321,6 +321,7 @@
 }
 
 .team-principles-heading {
+  color: var(--team-ink);
   display: flex;
   align-items: end;
   justify-content: space-between;

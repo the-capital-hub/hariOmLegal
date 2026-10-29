@@ -393,3 +393,7 @@ select {
     transition-duration: 0.01ms !important;
   }
 }
+/* Global rule: Disable italic text across the website */
+html body * {
+  font-style: normal !important;
+}

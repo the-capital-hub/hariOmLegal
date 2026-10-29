@@ -14,6 +14,7 @@ import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 import ScrollEffects from "./components/ScrollAnimation/ScrollEffects";
 import OurTeam from "./pages/Team/OurTeam";
 import DisclaimerModal from "./components/DisclaimerModal/DisclaimerModal";
+import WhatsAppFloat from "./components/WhatsAppFloat/WhatsAppFloat";
 
 function App() {
   return (
@@ -35,7 +36,7 @@ function App() {
 
         </Routes>
       </main>
-      
+      <WhatsAppFloat/>
 
       <Footer />
       <DisclaimerModal/>

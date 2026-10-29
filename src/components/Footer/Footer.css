@@ -123,32 +123,20 @@
 .hol-footer-logo-link {
   display: inline-flex;
   align-items: center;
+  padding: 8px 12px;
+  background: #f7f4ee;
+  border-radius: 4px;
   max-width: 100%;
-  padding: 4px;
-  background: #ea86867e;
-  border-radius: 10px;
-  color: white;
-  
-  text-decoration: none;
 }
 
 .hol-footer-logo {
   display: block;
-  width: 100%;
-  max-width: 270px;
-  height: 86px;
+  width: 280px;
+  max-width: 100%;
+  height: 76px;
   object-fit: contain;
   object-position: left center;
 }
-
-.hol-footer-description {
-  max-width: 330px;
-  margin: 18px 0;
-  color: var(--footer-muted);
-  font-size: 13px;
-  line-height: 1.9;
-}
-
 /* Social media brand icons */
 
 .hol-footer-socials {

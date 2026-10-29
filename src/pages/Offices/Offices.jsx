@@ -9,28 +9,43 @@ import bengaluru from '../../assets/office/bengaluru.png'
 import india from '../../assets/office/india-map.png'
 const offices = [
   {
-    city: "New Delhi",
-    address: "A 12, Connaught Place, New Delhi 110001",
-    phone: "+91 11 4156 7890",
-    email: "delhi@hariomlegal.in",
-    image: delhi,
-    map: "https://www.google.com/maps/search/?api=1&query=Connaught+Place+New+Delhi",
-  },
-  {
-    city: "Mumbai",
-    address: "Bandra Kurla Complex, Mumbai 400051",
-    phone: "+91 22 4602 1180",
-    email: "mumbai@hariomlegal.in",
-    image: mumbai,
-    map: "https://www.google.com/maps/search/?api=1&query=Bandra+Kurla+Complex+Mumbai",
-  },
-  {
     city: "Bengaluru",
-    address: "Brigade Road, Bengaluru 560001",
-    phone: "+91 80 4895 2200",
-    email: "bengaluru@hariomlegal.in",
+    officeType: "Head Office",
+    address:
+      "No. 319/3, 5th Floor, 20th C Main Road, 80 Feet Road, Opp. Indoor Stadium, Koramangala 8th Block, Bengaluru, Karnataka 560095",
+    phone: "+91 81238 38480",
+    email: "info@hariomlegal.in",
     image: bengaluru,
-    map: "https://www.google.com/maps/search/?api=1&query=Brigade+Road+Bengaluru",
+    map: "https://www.google.com/maps/search/?api=1&query=Hari+Om+Legal+No+319%2F3+20th+C+Main+Road+Koramangala+8th+Block+Bengaluru+560095",
+  },
+  {
+    city: "Hyderabad",
+    officeType: "Branch Office",
+    address:
+      "No. 21/898, Petlabruz, Purnapul, Hyderabad, Telangana 500002",
+    phone: "+91 81238 38480",
+    email: "info@hariomlegal.in",
+    image: delhi,
+    map: "https://www.google.com/maps/search/?api=1&query=Hari+Om+Legal+No+21%2F898+Petlabruz+Purnapul+Hyderabad+500002",
+  },
+  {
+    city: "Pune",
+    officeType: "Branch Office",
+    address:
+      "No. 107/2, Tophakhana, Shivajinagar, Pune, Maharashtra 411005",
+    phone: "+91 81238 38480",
+    email: "info@hariomlegal.in",
+    image: mumbai,
+    map: "https://www.google.com/maps/search/?api=1&query=Hari+Om+Legal+No+107%2F2+Tophakhana+Shivajinagar+Pune+411005",
+  },
+  {
+    city: "Chennai",
+    officeType: "Branch Office",
+    address: "No. 04, George Town, Chennai, Tamil Nadu 600104",
+    phone: "+91 81238 38480",
+    email: "info@hariomlegal.in",
+    image: delhi,
+    map: "https://www.google.com/maps/search/?api=1&query=Hari+Om+Legal+No+04+George+Town+Chennai+600104",
   },
 ];
 

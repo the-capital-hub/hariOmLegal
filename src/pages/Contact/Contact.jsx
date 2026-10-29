@@ -2,29 +2,44 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Contact.css";
-import delhi from '../../assets/contact/delhi.png'
-import mumbai from '../../assets/contact/mumbai.png'
+import bengaluru from '../../assets/contact/bengaluru.png';
 
-import bengaluru from '../../assets/contact/bengaluru.png'
-import india from '../../assets/office/india-map.png'
+import {
+  FaInstagram,
+  FaLinkedinIn,
+  FaWhatsapp,
+} from "react-icons/fa";
 const offices = [
   {
-    city: "New Delhi",
-    address: "A 12, Connaught Place, New Delhi 110001",
-    image: delhi,
-    map: "https://www.google.com/maps/search/?api=1&query=Connaught+Place+New+Delhi",
-  },
-  {
-    city: "Mumbai",
-    address: "Bandra Kurla Complex, Mumbai 400051",
-    image: mumbai,
-    map: "https://www.google.com/maps/search/?api=1&query=Bandra+Kurla+Complex+Mumbai",
-  },
-  {
     city: "Bengaluru",
-    address: "Brigade Road, Bengaluru 560001",
+    officeType: "Head Office",
+    address:
+      "No. 319/3, 5th Floor, 20th C Main Road, 80 Feet Road, Opp. Indoor Stadium, Koramangala 8th Block, Bengaluru, Karnataka 560095",
     image: bengaluru,
-    map: "https://www.google.com/maps/search/?api=1&query=Brigade+Road+Bengaluru",
+    map: "https://www.google.com/maps/search/?api=1&query=Hari+Om+Legal+No+319%2F3+5th+Floor+20th+C+Main+Road+Koramangala+8th+Block+Bengaluru+560095",
+  },
+  {
+    city: "Hyderabad",
+    officeType: "Branch Office",
+    address:
+      "No. 21/898, Petlabruz, Purnapul, Hyderabad, Telangana 500002",
+    image: bengaluru,
+    map: "https://www.google.com/maps/search/?api=1&query=Hari+Om+Legal+No+21%2F898+Petlabruz+Purnapul+Hyderabad+500002",
+  },
+  {
+    city: "Pune",
+    officeType: "Branch Office",
+    address:
+      "No. 107/2, Tophakhana, Shivajinagar, Pune, Maharashtra 411005",
+    image: bengaluru,
+    map: "https://www.google.com/maps/search/?api=1&query=Hari+Om+Legal+No+107%2F2+Tophakhana+Shivajinagar+Pune+411005",
+  },
+  {
+    city: "Chennai",
+    officeType: "Branch Office",
+    address: "No. 04, George Town, Chennai, Tamil Nadu 600104",
+    image: bengaluru,
+    map: "https://www.google.com/maps/search/?api=1&query=Hari+Om+Legal+No+04+George+Town+Chennai+600104",
   },
 ];
 
@@ -258,8 +273,8 @@ export default function Contact() {
             <div className="contact-direct-item">
               <span className="contact-direct-icon">⌖</span>
               <span>
-                <strong>Head Office</strong>
-                <small>Contact us to confirm our office address</small>
+                <strong>Bengaluru Head Office</strong>
+                <small>No. 319/3, 5th Floor, 20th C Main Road, Koramangala 8th Block, Bengaluru 560095</small>
               </span>
             </div>
 
@@ -267,28 +282,28 @@ export default function Contact() {
               <h3>Follow Us</h3>
               <div className="contact-social-links">
                 <a
-                  href="https://www.linkedin.com/"
+                  href="https://www.linkedin.com/company/hari-om-legal/"
                   target="_blank"
                   rel="noreferrer"
                   aria-label="LinkedIn"
                 >
-                  in
+                  <FaLinkedinIn/>
                 </a>
                 <a
-                  href="https://www.instagram.com/"
+                  href="https://www.instagram.com/hariom_legal?rpxt=eTZicmttenp3aW9u&utm_source=qr"
                   target="_blank"
                   rel="noreferrer"
                   aria-label="Instagram"
                 >
-                  ◎
+                  <FaInstagram/>
                 </a>
                 <a
-                  href="https://www.youtube.com/"
+                  href="https://wa.me/918123838480"
                   target="_blank"
                   rel="noreferrer"
-                  aria-label="YouTube"
+                  aria-label="WhatsApp"
                 >
-                  ▶
+                  <FaWhatsapp/>
                 </a>
               </div>
             </div>
@@ -336,6 +351,9 @@ export default function Contact() {
               </a>
 
               <div className="contact-office-card-content">
+                <span className={`contact-office-type${office.officeType === "Head Office" ? " is-head-office" : ""}`}>
+                  {office.officeType}
+                </span>
                 <h3>{office.city}</h3>
                 <p>
                   <span>⌖</span>

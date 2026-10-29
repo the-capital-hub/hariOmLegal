@@ -533,6 +533,7 @@
 /* Map and quick contact */
 
 .contact-quick-section {
+  padding: 0 70px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   border-top: 1px solid var(--contact-border);

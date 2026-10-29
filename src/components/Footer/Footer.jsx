@@ -13,15 +13,18 @@ import {
   FaWhatsapp,
 } from "react-icons/fa";
 
+import { Link } from "react-router-dom";
+
 import logo from "../../assets/footer/logo.png";
+import certificate from "../../assets/Certificate.pdf";
 import "./Footer.css";
 
 const quickLinks = [
-  { label: "Home", href: "#home" },
-  { label: "About Us", href: "#about" },
-  { label: "Our Approach", href: "#approach" },
-  { label: "Our Offices", href: "#offices" },
-  { label: "Contact Us", href: "#contact" },
+  { label: "Home", href: "/" },
+  { label: "About Us", href: "/about" },
+  { label: "Our Approach", href: "/approach" },
+  { label: "Our Offices", href: "/offices" },
+  { label: "Contact Us", href: "/contact" },
 ];
 
 const practiceAreas = [
@@ -43,14 +46,12 @@ const offices = [
   {
     city: "Hyderabad",
     type: "Branch Office",
-    address:
-      "No. 21/898, Petlabruz, Purnapul, Hyderabad 500002",
+    address: "No. 21/898, Petlabruz, Purnapul, Hyderabad 500002",
   },
   {
     city: "Pune",
     type: "Branch Office",
-    address:
-      "No. 107/2, Tophakhana, Shivajinagar, Pune 411005",
+    address: "No. 107/2, Tophakhana, Shivajinagar, Pune 411005",
   },
   {
     city: "Chennai",
@@ -58,6 +59,9 @@ const offices = [
     address: "No. 04, George Town, Chennai 600104",
   },
 ];
+
+const WHATSAPP_URL =
+  "https://wa.me/918123838480?text=Hello%20Hari%20Om%20Legal%2C%20I%20would%20like%20to%20enquire%20about%20your%20legal%20services.";
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -85,7 +89,7 @@ export default function Footer() {
           </div>
 
           <a
-            href="https://wa.me/918123838480"
+            href={WHATSAPP_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="hol-footer-primary-btn"
@@ -99,10 +103,10 @@ export default function Footer() {
       {/* Main footer */}
       <div className="hol-footer-container">
         <div className="hol-footer-main-grid">
-          {/* Brand */}
+          {/* Brand and logo */}
           <div className="hol-footer-brand">
-            <a
-              href="#home"
+            <Link
+              to="/"
               className="hol-footer-logo-link"
               aria-label="Hari Om Legal homepage"
             >
@@ -112,7 +116,7 @@ export default function Footer() {
                 className="hol-footer-logo"
                 loading="lazy"
               />
-            </a>
+            </Link>
 
             <p className="hol-footer-description">
               Legal counsel and representation guided by
@@ -140,7 +144,7 @@ export default function Footer() {
               </a>
 
               <a
-                href="https://wa.me/918123838480"
+                href={WHATSAPP_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="WhatsApp"
@@ -158,16 +162,16 @@ export default function Footer() {
             <ul>
               {quickLinks.map((item) => (
                 <li key={item.label}>
-                  <a href={item.href}>
+                  <Link to={item.href}>
                     <ArrowUpRight size={14} />
                     <span>{item.label}</span>
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
 
             <a
-              href="/hari-om-legal-trademark.pdf"
+              href={certificate}
               target="_blank"
               rel="noopener noreferrer"
               className="hol-footer-certificate-link"
@@ -186,16 +190,16 @@ export default function Footer() {
             <ul>
               {practiceAreas.map((area) => (
                 <li key={area}>
-                  <a href="#practice-areas">
+                  <Link to="/practice-areas">
                     <ArrowUpRight size={14} />
                     <span>{area}</span>
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* Contact */}
+          {/* Contact details */}
           <div className="hol-footer-column hol-footer-contact">
             <h3>Contact Us</h3>
             <span className="hol-footer-accent-line" />
@@ -207,6 +211,7 @@ export default function Footer() {
               <span className="hol-footer-contact-icon">
                 <Phone size={17} />
               </span>
+
               <span className="hol-footer-contact-copy">
                 <small>Call our office</small>
                 <strong>+91 81238 38480</strong>
@@ -220,6 +225,7 @@ export default function Footer() {
               <span className="hol-footer-contact-icon">
                 <Mail size={17} />
               </span>
+
               <span className="hol-footer-contact-copy">
                 <small>Email us</small>
                 <strong>info@hariomlegal.in</strong>
@@ -232,7 +238,7 @@ export default function Footer() {
             </div>
 
             <a
-              href="https://wa.me/918123838480"
+              href={WHATSAPP_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="hol-footer-whatsapp"
@@ -245,12 +251,16 @@ export default function Footer() {
         </div>
 
         {/* Office locations */}
-        <section className="hol-footer-offices" id="footer-offices">
+        <section
+          className="hol-footer-offices"
+          id="footer-offices"
+        >
           <div className="hol-footer-offices-heading">
             <div>
               <span className="hol-footer-kicker">
                 OUR LOCATIONS
               </span>
+
               <h3>Our offices across India</h3>
             </div>
 
@@ -283,6 +293,7 @@ export default function Footer() {
         {/* Legal disclaimer */}
         <div className="hol-footer-disclaimer">
           <Scale size={19} />
+
           <p>
             The information on this website is for general
             informational purposes only and does not constitute
@@ -291,7 +302,7 @@ export default function Footer() {
           </p>
         </div>
 
-        {/* Bottom bar */}
+        {/* Copyright */}
         <div className="hol-footer-bottom">
           <p>
             © {year} Hari Om Legal. All rights reserved.

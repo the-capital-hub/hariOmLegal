@@ -203,7 +203,7 @@ export default function OurTeam() {
         aria-label="Our professional principles"
       >
         <div className="team-principles-heading">
-          <Eyebrow light>WHAT GUIDES US</Eyebrow>
+          <Eyebrow dark>WHAT GUIDES US</Eyebrow>
 
           <h2>
             Principles that shape{" "}
