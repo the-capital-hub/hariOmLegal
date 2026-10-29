@@ -1,4 +1,3 @@
-
 import {
   ArrowRight,
   ArrowUpRight,
@@ -12,16 +11,16 @@ import {
   FileText,
 } from "lucide-react";
 import { Link } from "react-router-dom";
+import { motion } from "motion/react";
 import "./PracticeAreas.css";
-import image1 from '../../assets/practiceimages/constitutional-law.png'
-import image2 from '../../assets/practiceimages/civil-law.png'
-import image3 from '../../assets/practiceimages/criminal-law.png'
-import image4 from '../../assets/practiceimages/corporate-law.png'
-import image5 from '../../assets/practiceimages/property-law.png'
-import image6 from '../../assets/practiceimages/family-law.png'
-import image7 from '../../assets/practiceimages/dispute-resolution.png'
-import image8 from '../../assets/practiceimages/compliance.png'
-import image from '../../assets/practiceimages/constitutional-law.png'
+import image1 from "../../assets/practiceimages/constitutional-law.png";
+import image2 from "../../assets/practiceimages/civil-law.png";
+import image3 from "../../assets/practiceimages/criminal-law.png";
+import image4 from "../../assets/practiceimages/corporate-law.png";
+import image5 from "../../assets/practiceimages/property-law.png";
+import image6 from "../../assets/practiceimages/family-law.png";
+import image7 from "../../assets/practiceimages/dispute-resolution.png";
+import image8 from "../../assets/practiceimages/compliance.png";
 const practices = [
   {
     number: "01",
@@ -95,17 +94,16 @@ const practices = [
     image: image8,
     alt: "Legal compliance books",
   },
-  
-{
-  number: "09",
-  title: "Supreme Court Litigation & SLPs",
-  description:
-    "Supreme Court litigation, Special Leave Petitions, constitutional issues and challenges to judgments and orders.",
-  icon: Landmark,
-  image: image1,
-  alt: "Supreme Court and constitutional law",
-},
 
+  {
+    number: "09",
+    title: "Supreme Court Litigation & SLPs",
+    description:
+      "Supreme Court litigation, Special Leave Petitions, constitutional issues and challenges to judgments and orders.",
+    icon: Landmark,
+    image: image1,
+    alt: "Supreme Court and constitutional law",
+  },
 ];
 
 const steps = [
@@ -139,7 +137,7 @@ export default function PracticeAreas() {
   return (
     <main className="hol-practice">
       {/* Hero */}
-      <section className="pa-hero">
+      <motion.section className="pa-hero" initial={{ opacity: 0, y: 18 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.12 }} transition={{ duration: 0.55, ease: "easeOut" }}>
         <div className="pa-hero-image" />
         <div className="pa-hero-overlay" />
 
@@ -158,9 +156,9 @@ export default function PracticeAreas() {
           </h1>
 
           <p>
-            From individuals to businesses, we provide tailored
-            legal counsel across a wide range of practice areas,
-            backed by experience, insight and a client first approach.
+            From individuals to businesses, we provide tailored legal counsel
+            across a wide range of practice areas, backed by experience, insight
+            and a client first approach.
           </p>
 
           <a href="#pa-expertise" className="pa-explore">
@@ -172,10 +170,10 @@ export default function PracticeAreas() {
         </div>
 
         <div className="pa-hero-index">03 / PRACTICE AREAS</div>
-      </section>
+      </motion.section>
 
       {/* Expertise introduction */}
-      <section className="pa-intro" id="pa-expertise">
+      <motion.section className="pa-intro" id="pa-expertise" initial={{ opacity: 0, y: 18 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.12 }} transition={{ duration: 0.55, ease: "easeOut" }}>
         <div className="pa-intro-label">
           <span className="pa-kicker">01 / OUR EXPERTISE</span>
           <span className="pa-intro-rule" />
@@ -200,32 +198,37 @@ export default function PracticeAreas() {
 
         <div className="pa-intro-copy">
           <p>
-            We offer legal advisory and representation across a
-            wide range of practice areas, with a focus on delivering
-            practical, reliable and strategic solutions.
+            We offer legal advisory and representation across a wide range of
+            practice areas, with a focus on delivering practical, reliable and
+            strategic solutions.
           </p>
 
           <p>
-            Our multidisciplinary approach allows us to address
-            complex legal issues with clarity and an understanding
-            of the relevant legal and commercial context.
+            Our multidisciplinary approach allows us to address complex legal
+            issues with clarity and an understanding of the relevant legal and
+            commercial context.
           </p>
         </div>
-      </section>
+      </motion.section>
 
       {/* Practice cards */}
-      <section className="pa-cards-section">
+      <motion.section className="pa-cards-section" initial={{ opacity: 0, y: 18 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.12 }} transition={{ duration: 0.55, ease: "easeOut" }}>
         <div className="pa-cards-grid">
           {practices.map((practice) => {
             const Icon = practice.icon;
 
             return (
-              <article className="pa-card" key={practice.number}>
+              <motion.article
+                className="pa-card"
+                key={practice.number}
+                initial={{ opacity: 0, y: 16 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.15 }}
+                transition={{ duration: 0.45, delay: (Number(practice.number) % 4) * 0.06, ease: "easeOut" }}
+              >
                 <div className="pa-card-content">
                   <div className="pa-card-top">
-                    <span className="pa-card-number">
-                      {practice.number}
-                    </span>
+                    <span className="pa-card-number">{practice.number}</span>
 
                     <Icon
                       className="pa-card-icon"
@@ -243,70 +246,62 @@ export default function PracticeAreas() {
                 </div>
 
                 <div className="pa-card-image-wrap">
-                  <img
-                    src={practice.image}
-                    alt={practice.alt}
-                    loading="lazy"
-                  />
+                  <img src={practice.image} alt={practice.alt} loading="lazy" />
                 </div>
-              </article>
+              </motion.article>
             );
           })}
         </div>
-      </section>
+      </motion.section>
 
-      
-{/* Supreme Court Litigation and SLPs */}
-<section className="pa-slp-section" id="supreme-court-slps">
-  <div className="pa-slp-label">
-    <span className="pa-kicker">03 / SUPREME COURT PRACTICE</span>
-    <span className="pa-intro-rule" />
-    <p>
-      SUPREME COURT
-      <br />
-      LITIGATION
-    </p>
-  </div>
+      {/* Supreme Court Litigation and SLPs */}
+      <motion.section className="pa-slp-section" id="supreme-court-slps" initial={{ opacity: 0, y: 18 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.12 }} transition={{ duration: 0.55, ease: "easeOut" }}>
+        <div className="pa-slp-label">
+          <span className="pa-kicker">03 / SUPREME COURT PRACTICE</span>
+          <span className="pa-intro-rule" />
+          <p>
+            SUPREME COURT
+            <br />
+            LITIGATION
+          </p>
+        </div>
 
-  <div className="pa-slp-content">
-    <h2>
-      Supreme Court Litigation and
-      <br />
-      <em>Special Leave Petitions (SLPs)</em>
-    </h2>
+        <div className="pa-slp-content">
+          <h2>
+            Supreme Court Litigation and
+            <br />
+            <em>Special Leave Petitions (SLPs)</em>
+          </h2>
 
-    <p>
-      Hari Om Legal conducts litigation before the Hon’ble Supreme
-      Court of India, including matters involving substantial
-      questions of law, constitutional issues, and challenges to
-      judgments and orders of courts and tribunals. We assist
-      clients in assessing the merits of a proposed challenge,
-      identifying the relevant questions of law, analysing the
-      impugned judgment or order, and determining the most
-      appropriate course of action in accordance with procedural
-      requirements.
-    </p>
+          <p>
+            Hari Om Legal conducts litigation before the Hon’ble Supreme Court
+            of India, including matters involving substantial questions of law,
+            constitutional issues, and challenges to judgments and orders of
+            courts and tribunals. We assist clients in assessing the merits of a
+            proposed challenge, identifying the relevant questions of law,
+            analysing the impugned judgment or order, and determining the most
+            appropriate course of action in accordance with procedural
+            requirements.
+          </p>
 
-    <p>
-      Our services include the preparation, drafting, and filing
-      of Special Leave Petitions (SLPs) before the Hon’ble Supreme
-      Court, where legally maintainable. We help clients challenge
-      judgments, decrees, and orders by formulating sound grounds
-      of challenge and presenting the facts and legal issues with
-      clarity. Our work extends to preparing petitions, compiling
-      case records and supporting documents, drafting applications
-      for interim relief where warranted, and appearing in
-      proceedings before the Court. Throughout, we focus on clear,
-      well-researched, and legally sustainable arguments, with
-      close attention to procedural compliance, limitation periods,
-      and the specific requirements of Supreme Court practice.
-    </p>
-  </div>
-</section>
-
+          <p>
+            Our services include the preparation, drafting, and filing of
+            Special Leave Petitions (SLPs) before the Hon’ble Supreme Court,
+            where legally maintainable. We help clients challenge judgments,
+            decrees, and orders by formulating sound grounds of challenge and
+            presenting the facts and legal issues with clarity. Our work extends
+            to preparing petitions, compiling case records and supporting
+            documents, drafting applications for interim relief where warranted,
+            and appearing in proceedings before the Court. Throughout, we focus
+            on clear, well-researched, and legally sustainable arguments, with
+            close attention to procedural compliance, limitation periods, and
+            the specific requirements of Supreme Court practice.
+          </p>
+        </div>
+      </motion.section>
 
       {/* How we work */}
-      <section className="pa-process" id="pa-approach">
+      <motion.section className="pa-process" id="pa-approach" initial={{ opacity: 0, y: 18 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.12 }} transition={{ duration: 0.55, ease: "easeOut" }}>
         <div className="pa-process-label">
           <span className="pa-kicker">02 / OUR APPROACH</span>
           <span className="pa-intro-rule" />
@@ -322,14 +317,19 @@ export default function PracticeAreas() {
             <h2>
               How <em>We Work.</em>
             </h2>
-            <p>
-              A structured and client focused approach to every matter.
-            </p>
+            <p>A structured and client focused approach to every matter.</p>
           </div>
 
           <div className="pa-steps">
             {steps.map((step, index) => (
-              <article className="pa-step" key={step.number}>
+              <motion.article
+                className="pa-step"
+                key={step.number}
+                initial={{ opacity: 0, y: 14 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.2 }}
+                transition={{ duration: 0.4, delay: index * 0.07, ease: "easeOut" }}
+              >
                 <div className="pa-step-top">
                   <span>{step.number}</span>
                   {index !== steps.length - 1 && (
@@ -341,14 +341,14 @@ export default function PracticeAreas() {
 
                 <h3>{step.title}</h3>
                 <p>{step.description}</p>
-              </article>
+              </motion.article>
             ))}
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Consultation CTA */}
-      <section className="pa-cta" id="pa-contact">
+      <motion.section className="pa-cta" id="pa-contact" initial={{ opacity: 0, y: 18 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.12 }} transition={{ duration: 0.55, ease: "easeOut" }}>
         <div className="pa-cta-image" />
         <div className="pa-cta-overlay" />
 
@@ -358,15 +358,15 @@ export default function PracticeAreas() {
             LET US DISCUSS YOUR LEGAL NEEDS
           </div>
 
-          <h2 style={{color:"white"}}>
+          <h2 style={{ color: "white" }}>
             Speak to Our Team
             <br />
             <em>Today.</em>
           </h2>
 
           <p>
-            Get in touch to discuss your matter and the
-            options available to you.
+            Get in touch to discuss your matter and the options available to
+            you.
           </p>
 
           <a
@@ -379,7 +379,7 @@ export default function PracticeAreas() {
             <ArrowRight size={17} />
           </a>
         </div>
-      </section>
+      </motion.section>
     </main>
   );
 }

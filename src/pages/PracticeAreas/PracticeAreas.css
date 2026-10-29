@@ -1,5 +1,4 @@
-
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap");
 
 .hol-practice {
   --pa-red: #cf3329;
@@ -34,7 +33,7 @@
   font-family: "Playfair Display", Georgia, serif;
   font-weight: 400;
 }
-.hol-practice h1{
+.hol-practice h1 {
   color: var(--pa-paper);
 }
 
@@ -81,10 +80,10 @@
   z-index: -1;
   background: linear-gradient(
     90deg,
-    rgba(12, 10, 9, .97) 0%,
-    rgba(12, 10, 9, .88) 27%,
-    rgba(12, 10, 9, .48) 53%,
-    rgba(12, 10, 9, .12) 100%
+    rgba(12, 10, 9, 0.97) 0%,
+    rgba(12, 10, 9, 0.88) 27%,
+    rgba(12, 10, 9, 0.48) 53%,
+    rgba(12, 10, 9, 0.12) 100%
   );
 }
 
@@ -92,21 +91,21 @@
   width: min(600px, 65%);
   margin-left: 7.8%;
   padding: 35px 0 48px;
-  animation: paContentReveal .8s .1s ease both;
+  animation: paContentReveal 0.8s 0.1s ease both;
 }
 
 .pa-eyebrow {
   display: flex;
   align-items: center;
   gap: 10px;
-  color: rgba(255, 255, 255, .9);
+  color: rgba(255, 255, 255, 0.9);
   font-size: 9px;
   font-weight: 600;
-  letter-spacing: .14em;
+  letter-spacing: 0.14em;
 }
 
 .pa-eyebrow > span {
-   width: 34px;
+  width: 34px;
   height: 2px;
   background: white;
   position: relative;
@@ -121,15 +120,12 @@
   border-radius: 50%;
   background: var(--pa-red);
   transform: translateY(-50%);
-
 }
-
-
 
 .pa-hero-content h1 {
   margin: 21px 0 12px;
   font-size: clamp(39px, 4.5vw, 58px);
-  letter-spacing: -.045em;
+  letter-spacing: -0.045em;
   line-height: 1.04;
 }
 
@@ -141,7 +137,7 @@
 .pa-hero-content > p {
   max-width: 410px;
   margin-bottom: 18px;
-  color: rgba(255, 255, 255, .86);
+  color: rgba(255, 255, 255, 0.86);
   font-size: 11px;
   line-height: 1.75;
 }
@@ -153,7 +149,7 @@
   color: #fff;
   font-size: 9px;
   font-weight: 600;
-  letter-spacing: .1em;
+  letter-spacing: 0.1em;
   text-decoration: none;
 }
 
@@ -162,9 +158,11 @@
   width: 42px;
   height: 42px;
   place-items: center;
-  border: 1px solid rgba(255, 255, 255, .6);
+  border: 1px solid rgba(255, 255, 255, 0.6);
   border-radius: 50%;
-  transition: background .25s ease, border-color .25s ease;
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease;
 }
 
 .pa-explore:hover .pa-explore-icon {
@@ -176,10 +174,10 @@
   position: absolute;
   right: 7.8%;
   bottom: 25px;
-  color: rgba(255, 255, 255, .85);
+  color: rgba(255, 255, 255, 0.85);
   font-size: 8px;
   font-weight: 600;
-  letter-spacing: .12em;
+  letter-spacing: 0.12em;
 }
 
 /* Shared labels */
@@ -188,7 +186,7 @@
   color: var(--pa-red);
   font-size: 9px;
   font-weight: 600;
-  letter-spacing: .12em;
+  letter-spacing: 0.12em;
 }
 
 .pa-intro-rule {
@@ -202,7 +200,7 @@
 
 .pa-intro {
   display: grid;
-  grid-template-columns: .56fr 1.1fr 1.25fr;
+  grid-template-columns: 0.56fr 1.1fr 1.25fr;
   align-items: start;
   gap: 5.5%;
   padding: 34px 8.3% 27px;
@@ -221,14 +219,14 @@
   margin-bottom: 0;
   color: var(--pa-muted);
   font-size: 9px;
-  letter-spacing: .1em;
+  letter-spacing: 0.1em;
   line-height: 1.7;
 }
 
 .pa-intro-heading h2 {
   margin: -4px 0 0;
   font-size: clamp(32px, 3.5vw, 45px);
-  letter-spacing: -.04em;
+  letter-spacing: -0.04em;
   line-height: 1.08;
 }
 
@@ -267,12 +265,14 @@
   overflow: hidden;
   border: 1px solid var(--pa-border);
   background: #faf8f5;
-  transition: border-color .25s ease, transform .25s ease;
+  transition:
+    border-color 0.25s ease,
+    transform 0.25s ease;
 }
 
 .pa-card:hover {
   transform: translateY(-3px);
-  border-color: rgba(207, 51, 41, .65);
+  border-color: rgba(207, 51, 41, 0.65);
 }
 
 .pa-card-content {
@@ -308,7 +308,9 @@
   border: 1px solid var(--pa-red);
   border-radius: 50%;
   color: var(--pa-red);
-  transition: color .25s ease, background .25s ease;
+  transition:
+    color 0.25s ease,
+    background 0.25s ease;
 }
 
 .pa-card:hover .pa-card-arrow {
@@ -319,7 +321,7 @@
 .pa-card h3 {
   margin-bottom: 6px;
   font-size: clamp(15px, 1.45vw, 19px);
-  letter-spacing: -.025em;
+  letter-spacing: -0.025em;
   line-height: 1.23;
 }
 
@@ -343,7 +345,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform .5s ease;
+  transition: transform 0.5s ease;
 }
 
 .pa-card:hover .pa-card-image-wrap img {
@@ -354,7 +356,7 @@
 
 .pa-process {
   display: grid;
-  grid-template-columns: .55fr 3.45fr;
+  grid-template-columns: 0.55fr 3.45fr;
   gap: 5.5%;
   padding: 7px 8.3% 25px;
   background: var(--pa-paper);
@@ -382,7 +384,7 @@
 .pa-process-heading h2 {
   margin-bottom: 0;
   font-size: clamp(31px, 3.4vw, 43px);
-  letter-spacing: -.04em;
+  letter-spacing: -0.04em;
 }
 
 .pa-process-heading > p {
@@ -480,10 +482,10 @@
   z-index: -1;
   background: linear-gradient(
     90deg,
-    rgba(12, 10, 9, .97) 0%,
-    rgba(12, 10, 9, .86) 37%,
-    rgba(12, 10, 9, .42) 72%,
-    rgba(12, 10, 9, .2) 100%
+    rgba(12, 10, 9, 0.97) 0%,
+    rgba(12, 10, 9, 0.86) 37%,
+    rgba(12, 10, 9, 0.42) 72%,
+    rgba(12, 10, 9, 0.2) 100%
   );
 }
 
@@ -496,7 +498,7 @@
 .pa-cta-content h2 {
   margin: 13px 0 9px;
   font-size: clamp(37px, 4.4vw, 52px);
-  letter-spacing: -.04em;
+  letter-spacing: -0.04em;
   line-height: 1.07;
 }
 
@@ -507,7 +509,7 @@
 .pa-cta-content > p {
   max-width: 350px;
   margin-bottom: 13px;
-  color: rgba(255, 255, 255, .85);
+  color: rgba(255, 255, 255, 0.85);
   font-size: 11px;
   line-height: 1.7;
 }
@@ -524,7 +526,9 @@
   font-size: 10px;
   font-weight: 600;
   text-decoration: none;
-  transition: background .25s ease, gap .25s ease;
+  transition:
+    background 0.25s ease,
+    gap 0.25s ease;
 }
 
 .pa-cta-button:hover {
@@ -535,8 +539,12 @@
 /* Animations */
 
 @keyframes paHeroReveal {
-  from { transform: scale(1.055); }
-  to { transform: scale(1); }
+  from {
+    transform: scale(1.055);
+  }
+  to {
+    transform: scale(1);
+  }
 }
 
 @keyframes paContentReveal {
@@ -563,7 +571,7 @@
   }
 
   .pa-intro {
-    grid-template-columns: .55fr 1fr;
+    grid-template-columns: 0.55fr 1fr;
     gap: 28px;
     padding-right: 6%;
     padding-left: 6%;
@@ -633,8 +641,8 @@
   .pa-hero-overlay {
     background: linear-gradient(
       90deg,
-      rgba(12, 10, 9, .95),
-      rgba(12, 10, 9, .78)
+      rgba(12, 10, 9, 0.95),
+      rgba(12, 10, 9, 0.78)
     );
   }
 
@@ -783,8 +791,8 @@
   .pa-cta-overlay {
     background: linear-gradient(
       90deg,
-      rgba(12, 10, 9, .96),
-      rgba(12, 10, 9, .76)
+      rgba(12, 10, 9, 0.96),
+      rgba(12, 10, 9, 0.76)
     );
   }
 
@@ -899,5 +907,138 @@
   .pa-slp-content p {
     font-size: 12px;
     line-height: 1.8;
+  }
+}
+
+
+/* Refinement pass: consistent spacing, readable type and responsive motion */
+.hol-practice {
+  --pa-section-y: 20px;
+  --pa-content-x: 70px;
+}
+
+.hol-practice .pa-eyebrow,
+.hol-practice .pa-explore,
+.hol-practice .pa-hero-index,
+.hol-practice .pa-kicker,
+.hol-practice .pa-intro-label p,
+.hol-practice .pa-process-label p,
+.hol-practice .pa-intro-copy p,
+.hol-practice .pa-card-content > p,
+.hol-practice .pa-step-top > span:first-child,
+.hol-practice .pa-step > p,
+.hol-practice .pa-cta-button,
+.hol-practice .pa-cta-content > p,
+.hol-practice .pa-slp-label p {
+  font-size: max(12px, 0.75rem);
+}
+
+/* Large desktop: requested 70px side gutters */
+@media (min-width: 1200px) {
+  .pa-hero-content {
+    margin-left: 70px;
+    padding: 20px 0;
+  }
+
+  .pa-hero-index {
+    right: 70px;
+  }
+
+  .pa-intro {
+    padding: 20px 70px;
+    gap: 28px;
+  }
+
+  .pa-cards-section {
+    padding: 0 70px 20px;
+  }
+
+  .pa-process {
+    padding: 0 70px 20px;
+    gap: 28px;
+  }
+
+  .pa-slp-section {
+    padding: 20px 70px;
+    gap: 28px;
+  }
+
+  .pa-cta-content {
+    margin-left: 70px;
+    padding: 20px 0;
+  }
+}
+
+/* Tablet: keep gutters compact and prevent horizontal overflow */
+@media (min-width: 601px) and (max-width: 1199px) {
+  .pa-hero-content {
+    margin-left: 20px;
+    padding: 20px 0;
+  }
+
+  .pa-hero-index {
+    right: 20px;
+  }
+
+  .pa-intro,
+  .pa-process,
+  .pa-slp-section {
+    padding: 20px;
+    gap: 16px;
+  }
+
+  .pa-cards-section {
+    padding: 0 20px 20px;
+  }
+
+  .pa-cta-content {
+    margin-left: 20px;
+    padding: 20px 0;
+  }
+}
+
+/* Mobile: compact but comfortable spacing */
+@media (max-width: 600px) {
+  .pa-hero-content {
+    padding: 20px 16px;
+  }
+
+  .pa-hero-index {
+    right: 16px;
+  }
+
+  .pa-intro,
+  .pa-process,
+  .pa-slp-section {
+    padding: 16px;
+    gap: 16px;
+  }
+
+  .pa-cards-section {
+    padding: 0 16px 16px;
+  }
+
+  .pa-cta-content {
+    padding: 20px 16px;
+  }
+
+  .pa-card-content {
+    padding: 12px;
+  }
+}
+
+.hol-practice :where(.pa-card, .pa-step) {
+  min-width: 0;
+}
+
+.hol-practice img {
+  max-width: 100%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hol-practice [style],
+  .hol-practice * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
   }
 }

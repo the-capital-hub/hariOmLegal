@@ -1,5 +1,6 @@
 
 import React from "react";
+import { motion } from "motion/react";
 import { Link } from "react-router-dom";
 import "./About.css";
 import imageteam1 from '../../assets/about/team-consultation.png'
@@ -94,7 +95,12 @@ export default function About() {
   return (
     <main className="about-page">
       {/* Hero */}
-      <section className="about-hero">
+      <motion.section
+        initial={{ opacity: 0, y: 16 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.12 }}
+        transition={{ duration: 0.55, ease: "easeOut" }}
+        className="about-hero">
         <div className="about-hero-bg" />
 
         <div className="about-hero-content">
@@ -124,10 +130,15 @@ export default function About() {
         </div>
 
         <span className="about-hero-index">01 / ABOUT HARI OM LEGAL</span>
-      </section>
+      </motion.section>
 
       {/* Story */}
-      <section className="about-story" id="our-story">
+      <motion.section
+        initial={{ opacity: 0, y: 16 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.12 }}
+        transition={{ duration: 0.55, ease: "easeOut" }}
+        className="about-story" id="our-story">
         <div className="about-side-label">
           <span>01 / OUR STORY</span>
           <i />
@@ -174,22 +185,39 @@ export default function About() {
           />
           <span>Thoughtful counsel. Meaningful relationships.</span>
         </div>
-      </section>
+      </motion.section>
 
       {/* Trust principles */}
-      <section className="about-stats">
+      <motion.section
+        initial={{ opacity: 0, y: 16 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.12 }}
+        transition={{ duration: 0.55, ease: "easeOut" }}
+        className="about-stats">
         {stats.map((item) => (
-          <article className="about-stat" key={item.label}>
+          <motion.article
+            className="about-stat"
+            key={item.label}
+            initial={{ opacity: 0, y: 12 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.15 }}
+            transition={{ duration: 0.4, ease: "easeOut" }}
+          >
             <span className="about-stat-icon">{item.icon}</span>
             <h3 style={{color:"white"}}>{item.value}</h3>
             <strong>{item.label}</strong>
             <p>{item.description}</p>
-          </article>
+          </motion.article>
         ))}
-      </section>
+      </motion.section>
 
       {/* Philosophy */}
-      <section className="about-philosophy">
+      <motion.section
+        initial={{ opacity: 0, y: 16 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.12 }}
+        transition={{ duration: 0.55, ease: "easeOut" }}
+        className="about-philosophy">
         <div className="about-philosophy-image">
           <img
             src={courthouse}
@@ -233,10 +261,15 @@ export default function About() {
             Discover Our Approach <span>↗</span>
           </Link>
         </div>
-      </section>
+      </motion.section>
 
       {/* Values */}
-      <section className="about-values">
+      <motion.section
+        initial={{ opacity: 0, y: 16 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.12 }}
+        transition={{ duration: 0.55, ease: "easeOut" }}
+        className="about-values">
         <div className="about-values-heading">
           <div className="about-side-label">
             <span>02 / OUR VALUES</span>
@@ -264,18 +297,30 @@ export default function About() {
 
         <div className="about-values-grid">
           {values.map((value) => (
-            <article className="about-value-card" key={value.number}>
+            <motion.article
+              className="about-value-card"
+              key={value.number}
+              initial={{ opacity: 0, y: 12 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.15 }}
+              transition={{ duration: 0.4, ease: "easeOut", delay: Number(value.number) * 0.035 }}
+            >
               <span className="about-value-number">{value.number}</span>
               <span className="about-value-icon">{value.icon}</span>
               <h3>{value.title}</h3>
               <p>{value.description}</p>
-            </article>
+            </motion.article>
           ))}
         </div>
-      </section>
+      </motion.section>
 
       {/* Approach */}
-      <section className="about-approach">
+      <motion.section
+        initial={{ opacity: 0, y: 16 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.12 }}
+        transition={{ duration: 0.55, ease: "easeOut" }}
+        className="about-approach">
         <div className="about-approach-image">
           <img
             src={clientConsultation}
@@ -323,10 +368,15 @@ export default function About() {
             Explore Our Process <span>↗</span>
           </Link>
         </div>
-      </section>
+      </motion.section>
 
       {/* Team gallery */}
-      <section className="about-team">
+      <motion.section
+        initial={{ opacity: 0, y: 16 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.12 }}
+        transition={{ duration: 0.55, ease: "easeOut" }}
+        className="about-team">
         <div className="about-values-heading about-team-heading">
           <div className="about-side-label">
             <span>04 / OUR TEAM</span>
@@ -354,7 +404,14 @@ export default function About() {
 
         <div className="about-team-grid">
           {teamImages.map((item) => (
-            <article className="about-team-card" key={item.title}>
+            <motion.article
+              className="about-team-card"
+              key={item.title}
+              initial={{ opacity: 0, y: 12 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.15 }}
+              transition={{ duration: 0.45, ease: "easeOut" }}
+            >
               <div className="about-team-image">
                 <img src={item.image} alt={item.alt} loading="lazy" />
               </div>
@@ -362,13 +419,18 @@ export default function About() {
                 <h3>{item.title}</h3>
                 <p>{item.description}</p>
               </div>
-            </article>
+            </motion.article>
           ))}
         </div>
-      </section>
+      </motion.section>
 
       {/* CTA */}
-      <section className="about-cta">
+      <motion.section
+        initial={{ opacity: 0, y: 16 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.12 }}
+        transition={{ duration: 0.55, ease: "easeOut" }}
+        className="about-cta">
         <div className="about-cta-bg" />
 
         <div className="about-cta-content">
@@ -392,7 +454,7 @@ export default function About() {
             Consult an Expert <span>↗</span>
           </Link>
         </div>
-      </section>
+      </motion.section>
     </main>
   );
 }
