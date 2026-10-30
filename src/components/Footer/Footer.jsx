@@ -69,7 +69,7 @@ export default function Footer() {
   return (
     <footer className="hol-footer">
       {/* Consultation section */}
-      <section className="hol-footer-cta">
+      {/* <section className="hol-footer-cta">
         <div className="hol-footer-container hol-footer-cta-inner">
           <div className="hol-footer-cta-content">
             <span className="hol-footer-kicker">
@@ -99,6 +99,7 @@ export default function Footer() {
           </a>
         </div>
       </section>
+       */}
 
       {/* Main footer */}
       <div className="hol-footer-container">

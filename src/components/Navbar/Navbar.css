@@ -463,3 +463,137 @@
     transition: none !important;
   }
 }
+.hol-topbar-message,
+.hol-topbar-contact a {
+  font-size: 12px !important;
+}
+
+/* =========================================
+   HARI OM LEGAL NAVBAR
+   FINAL DESIGN SYSTEM OVERRIDES
+========================================= */
+
+.hol-navbar {
+  background: var(--hol-white, #ffffff);
+  border-bottom: 1px solid var(--hol-border, #ded8d1);
+}
+
+/* Top contact strip */
+
+.hol-topbar {
+  background: var(--hol-ink, #211f1e);
+}
+
+.hol-topbar-message,
+.hol-topbar-contact a {
+  font-size: 12px !important;
+}
+
+.hol-topbar-contact a svg {
+  color: var(--hol-red, #cf3329);
+}
+
+.hol-topbar-divider {
+  background: var(--hol-border, #ded8d1);
+}
+
+/* Main navigation */
+
+.hol-nav-link {
+  color: var(--hol-ink, #211f1e);
+  font-size: 12px;
+}
+
+.hol-nav-link::after {
+  background: var(--hol-red, #cf3329);
+}
+
+.hol-nav-link:hover,
+.hol-nav-link.hol-nav-active {
+  color: var(--hol-red, #cf3329);
+}
+
+/* Consultation button */
+
+.hol-nav-cta,
+.hol-mobile-cta {
+  background: var(--hol-red, #cf3329);
+  border-color: var(--hol-red, #cf3329);
+}
+
+.hol-nav-cta:hover,
+.hol-mobile-cta:hover {
+  background: var(--hol-red-dark, #a92520);
+  border-color: var(--hol-red-dark, #a92520);
+}
+
+/* Mobile menu button */
+
+.hol-menu-toggle {
+  color: var(--hol-ink, #211f1e);
+  border-color: var(--hol-border, #ded8d1);
+}
+
+.hol-menu-toggle:hover {
+  color: var(--hol-red, #cf3329);
+  border-color: var(--hol-red, #cf3329);
+}
+
+/* Mobile navigation */
+
+.hol-mobile-link {
+  color: var(--hol-ink, #211f1e);
+  font-size: 14px;
+}
+
+.hol-mobile-link:hover,
+.hol-mobile-link.hol-nav-active {
+  color: var(--hol-red, #cf3329);
+}
+
+.hol-mobile-contact {
+  background: var(--hol-cream, #f6f3ee);
+}
+
+.hol-mobile-contact > span {
+  font-size: 12px;
+}
+
+.hol-mobile-contact a,
+.hol-mobile-cta {
+  font-size: 14px;
+}
+
+.hol-mobile-contact a svg {
+  color: var(--hol-red, #cf3329);
+}
+
+/* Tablet and mobile gutters */
+
+@media (max-width: 1320px) {
+  .hol-navbar-inner,
+  .hol-topbar-inner {
+    width: calc(100% - 40px);
+  }
+}
+
+@media (max-width: 600px) {
+  .hol-topbar-contact a {
+    font-size: 12px !important;
+  }
+}
+
+@media (max-width: 360px) {
+  .hol-topbar-contact {
+    gap: 6px;
+  }
+
+  .hol-topbar-contact a {
+    font-size: 12px !important;
+  }
+
+  .hol-topbar-contact a svg {
+    width: 12px;
+    height: 12px;
+  }
+}

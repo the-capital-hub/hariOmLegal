@@ -193,7 +193,7 @@
 .about-side-label > i {
   display: block;
   width: 42px;
-  height: 1px;
+  height: 1px !important;
   background: var(--about-red, #cf3329);
   margin: 4px 0;
 }
@@ -709,6 +709,8 @@
   }
 
   .about-side-label > i {
+      height: 1px;
+
     height: 23px;
     margin: 8px 0;
   }

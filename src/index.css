@@ -3,27 +3,36 @@
 
 :root {
   font-family: 'DM Sans', sans-serif;
-  color: #252323;
-  background: #ffffff;
+  color: #211f1e;
+  background: #f6f3ee;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  --hol-black: #202020;
-  --hol-red: #c83228;
-  --hol-red-dark: #a92520;
-  --hol-white: #ffffff;
-  --hol-cream: #f7f5f1;
-  --hol-muted: #77716e;
-  --hol-border: #e7e2dc;
+  /* Hari Om Legal design system */
+  --hol-ink: #211f1e;
+  --hol-black: #211f1e;
 
+  --hol-red: #cf3329;
+  --hol-red-dark: #a92520;
+
+  --hol-cream: #f6f3ee;
+  --hol-white: #ffffff;
+  --hol-paper: #fffdf9;
+
+  --hol-muted: #77716e;
+  --hol-border: #ded8d1;
+
+  /* Existing aliases retained for compatibility */
   --font-body: 'DM Sans', sans-serif;
   --font-heading: 'Playfair Display', Georgia, serif;
 
   --container: 1200px;
-  --section-space: 20px;
-  --layout-gap: 16px;
+  --page-gutter: 70px;
+  --section-space: 40px;
+  --layout-gap: 20px;
+
   --motion-duration: 280ms;
   --motion-ease: cubic-bezier(0.22, 1, 0.36, 1);
 }
@@ -391,6 +400,47 @@ select {
     animation-iteration-count: 1 !important;
     scroll-behavior: auto !important;
     transition-duration: 0.01ms !important;
+  }
+}
+/* Global rule: Disable italic text across the website */
+html body * {
+  font-style: normal !important;
+}
+
+/* Global typography */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-size: 16px;
+}
+
+/* Consistent section spacing */
+section {
+  box-sizing: border-box;
+  padding: 20px 60px 0;
+}
+
+/* Prevent text from becoming too small */
+body,
+body p,
+body span,
+body a,
+body li,
+body label,
+body button,
+body input,
+body textarea,
+body small {
+  font-size: max(12px, 1em);
+}
+
+/* Responsive horizontal spacing */
+@media (max-width: 768px) {
+  section {
+    padding: 20px 20px 0;
   }
 }
 /* Global rule: Disable italic text across the website */

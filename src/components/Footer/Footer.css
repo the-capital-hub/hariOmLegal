@@ -832,3 +832,207 @@
     transition: none !important;
   }
 }
+/* Hari Om Legal shared design system */
+
+.hol-footer {
+  color: #f6f3ee;
+}
+
+.hol-footer-cta,
+.hol-footer-main-grid,
+.hol-footer-offices,
+.hol-footer-bottom {
+  border-color: #ded8d1;
+}
+
+.hol-footer-kicker,
+.hol-footer-contact-copy small,
+.hol-footer-location-count,
+.hol-footer-office-type,
+.hol-footer-bottom p {
+  font-size: 12px;
+}
+
+/* =========================================
+   HARI OM LEGAL
+   FOOTER DESIGN SYSTEM OVERRIDE
+========================================= */
+
+.hol-footer {
+  --footer-bg: #211f1e;
+  --footer-surface: #292624;
+  --footer-red: #cf3329;
+  --footer-white: #f6f3ee;
+  --footer-muted: #c2bbb4;
+
+  background: var(--footer-bg);
+  color: var(--footer-white);
+  font-family: var(--font-body);
+}
+
+/* Shared container */
+
+.hol-footer-container {
+  width: min(
+    var(--container, 1200px),
+    calc(100% - (var(--page-gutter, 70px) * 2))
+  );
+  margin-inline: auto;
+}
+
+/* Brand logo */
+
+.hol-footer-logo-link {
+  background: #f6f3ee;
+}
+
+.hol-footer-logo {
+  max-width: 100%;
+  object-fit: contain;
+}
+
+/* Footer headings */
+
+.hol-footer-column h3,
+.hol-footer-offices-heading h3,
+.hol-footer-office-title h4 {
+  color: #ffffff;
+  font-family: var(--font-heading);
+}
+
+/* Accent colors */
+
+.hol-footer-kicker,
+.hol-footer-accent-line,
+.hol-footer-office-title svg,
+.hol-footer-contact-icon,
+.hol-footer-contact-note svg,
+.hol-footer-whatsapp svg {
+  color: var(--footer-red);
+}
+
+.hol-footer-accent-line {
+  background: var(--footer-red);
+}
+
+/* Links */
+
+.hol-footer-column li a,
+.hol-footer-certificate-link,
+.hol-footer-back-top,
+.hol-footer-whatsapp {
+  transition:
+    color 250ms ease,
+    background 250ms ease,
+    border-color 250ms ease;
+}
+
+.hol-footer-column li a:hover,
+.hol-footer-back-top:hover {
+  color: #ffffff;
+}
+
+.hol-footer-column li a svg {
+  color: var(--footer-red);
+}
+
+/* Contact details */
+
+.hol-footer-contact-icon {
+  background: var(--footer-surface);
+  border-color: #48413c;
+}
+
+.hol-footer-contact-copy small {
+  color: var(--footer-muted);
+}
+
+.hol-footer-contact-copy strong {
+  color: #ffffff;
+}
+
+/* Office locations */
+
+.hol-footer-office-type {
+  color: var(--footer-red);
+}
+
+.hol-footer-office p {
+  color: var(--footer-muted);
+}
+
+/* Disclaimer */
+
+.hol-footer-disclaimer {
+  background: var(--footer-surface);
+  border-left-color: var(--footer-red);
+}
+
+.hol-footer-disclaimer p {
+  color: #d2cbc5;
+}
+
+/* Consistent borders */
+
+.hol-footer-main-grid,
+.hol-footer-offices,
+.hol-footer-bottom {
+  border-color: #403b37;
+}
+
+.hol-footer-office {
+  border-color: #403b37;
+}
+
+/* Minimum readable text size */
+
+.hol-footer-kicker,
+.hol-footer-contact-copy small,
+.hol-footer-location-count,
+.hol-footer-office-type,
+.hol-footer-bottom p {
+  font-size: 12px;
+}
+
+/* Desktop */
+
+@media (min-width: 761px) {
+  .hol-footer-container {
+    width: min(
+      var(--container, 1200px),
+      calc(100% - 140px)
+    );
+  }
+}
+
+/* Tablet */
+
+@media (max-width: 1024px) {
+  .hol-footer-container {
+    width: calc(100% - 64px);
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 760px) {
+  .hol-footer-container {
+    width: calc(100% - 36px);
+  }
+}
+
+/* Small phones */
+
+@media (max-width: 480px) {
+  .hol-footer-container {
+    width: calc(100% - 32px);
+  }
+
+  .hol-footer-kicker,
+  .hol-footer-contact-copy small,
+  .hol-footer-location-count,
+  .hol-footer-office-type,
+  .hol-footer-bottom p {
+    font-size: 12px;
+  }
+}
